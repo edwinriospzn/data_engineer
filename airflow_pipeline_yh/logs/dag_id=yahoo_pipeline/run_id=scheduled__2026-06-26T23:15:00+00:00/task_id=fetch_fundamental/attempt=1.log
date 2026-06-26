@@ -1,0 +1,21 @@
+[2026-06-26T23:20:02.376+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T23:15:00+00:00 [queued]>
+[2026-06-26T23:20:02.388+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T23:15:00+00:00 [queued]>
+[2026-06-26T23:20:02.388+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2026-06-26T23:20:02.406+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_fundamental> on 2026-06-26 23:15:00+00:00
+[2026-06-26T23:20:02.423+0000] {standard_task_runner.py:57} INFO - Started process 68 to run task
+[2026-06-26T23:20:02.433+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'fetch_fundamental', 'scheduled__2026-06-26T23:15:00+00:00', '--job-id', '252', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmpi4fvfwpw']
+[2026-06-26T23:20:02.438+0000] {standard_task_runner.py:85} INFO - Job 252: Subtask fetch_fundamental
+[2026-06-26T23:20:02.454+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T23:20:02.500+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T23:15:00+00:00 [running]> on host ae6504924d84
+[2026-06-26T23:20:02.595+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='fetch_fundamental' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T23:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T23:15:00+00:00'
+[2026-06-26T23:20:03.297+0000] {yahoo_utils.py:50} ERROR - ❌ Error con AAPL: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T23:20:06.129+0000] {yahoo_utils.py:50} ERROR - ❌ Error con NVDA: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/NVDA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T23:20:08.442+0000] {yahoo_utils.py:50} ERROR - ❌ Error con MSFT: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T23:20:10.771+0000] {yahoo_utils.py:50} ERROR - ❌ Error con GOOGL: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOGL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T23:20:13.082+0000] {yahoo_utils.py:50} ERROR - ❌ Error con AMZN: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T23:20:13.105+0000] {python.py:194} INFO - Done. Returned value was: []
+[2026-06-26T23:20:13.138+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yahoo_pipeline, task_id=fetch_fundamental, execution_date=20260626T231500, start_date=20260626T232002, end_date=20260626T232013
+[2026-06-26T23:20:13.174+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-06-26T23:20:13.207+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

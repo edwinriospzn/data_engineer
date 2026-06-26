@@ -1,0 +1,37 @@
+[2026-06-26T22:45:19.888+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T22:44:00+00:00 [queued]>
+[2026-06-26T22:45:19.896+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T22:44:00+00:00 [queued]>
+[2026-06-26T22:45:19.897+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2026-06-26T22:45:19.911+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_fundamental> on 2026-06-26 22:44:00+00:00
+[2026-06-26T22:45:19.924+0000] {standard_task_runner.py:57} INFO - Started process 97 to run task
+[2026-06-26T22:45:19.929+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'fetch_fundamental', 'scheduled__2026-06-26T22:44:00+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmp1q2etfuc']
+[2026-06-26T22:45:19.933+0000] {standard_task_runner.py:85} INFO - Job 33: Subtask fetch_fundamental
+[2026-06-26T22:45:19.958+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T22:45:20.036+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-26T22:44:00+00:00 [running]> on host 8452d42e4b61
+[2026-06-26T22:45:20.174+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='fetch_fundamental' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T22:44:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T22:44:00+00:00'
+[2026-06-26T22:45:20.814+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/scripts/yahoo_utils.py", line 35, in fetch_fundamental_data
+    info = stock.info
+  File "/home/airflow/.local/lib/python3.10/site-packages/yfinance/ticker.py", line 142, in info
+    return self.get_info()
+  File "/home/airflow/.local/lib/python3.10/site-packages/yfinance/base.py", line 1736, in get_info
+    data = self._quote.info
+  File "/home/airflow/.local/lib/python3.10/site-packages/yfinance/scrapers/quote.py", line 572, in info
+    self._fetch(self.proxy)
+  File "/home/airflow/.local/lib/python3.10/site-packages/yfinance/scrapers/quote.py", line 602, in _fetch
+    result = self._data.get_raw_json(
+  File "/home/airflow/.local/lib/python3.10/site-packages/yfinance/data.py", line 400, in get_raw_json
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-26T22:45:20.823+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=yahoo_pipeline, task_id=fetch_fundamental, execution_date=20260626T224400, start_date=20260626T224519, end_date=20260626T224520
+[2026-06-26T22:45:20.834+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 33 for task fetch_fundamental (429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests; 97)
+[2026-06-26T22:45:20.884+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2026-06-26T22:45:20.908+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

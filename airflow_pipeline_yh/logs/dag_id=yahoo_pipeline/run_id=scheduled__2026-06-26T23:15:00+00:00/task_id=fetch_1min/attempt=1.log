@@ -1,0 +1,30 @@
+[2026-06-26T23:20:02.324+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_1min scheduled__2026-06-26T23:15:00+00:00 [queued]>
+[2026-06-26T23:20:02.340+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_1min scheduled__2026-06-26T23:15:00+00:00 [queued]>
+[2026-06-26T23:20:02.341+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2026-06-26T23:20:02.363+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_1min> on 2026-06-26 23:15:00+00:00
+[2026-06-26T23:20:02.372+0000] {standard_task_runner.py:57} INFO - Started process 75 to run task
+[2026-06-26T23:20:02.379+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'fetch_1min', 'scheduled__2026-06-26T23:15:00+00:00', '--job-id', '251', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmph_zhyq_u']
+[2026-06-26T23:20:02.385+0000] {standard_task_runner.py:85} INFO - Job 251: Subtask fetch_1min
+[2026-06-26T23:20:02.406+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T23:20:02.459+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.fetch_1min scheduled__2026-06-26T23:15:00+00:00 [running]> on host 961bab9f867c
+[2026-06-26T23:20:02.553+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='fetch_1min' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T23:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T23:15:00+00:00'
+[2026-06-26T23:20:03.247+0000] {base.py:1679} ERROR - Failed to get ticker 'NVDA' reason: Expecting value: line 1 column 1 (char 0)
+[2026-06-26T23:20:03.254+0000] {base.py:1679} ERROR - Failed to get ticker 'GOOGL' reason: Expecting value: line 1 column 1 (char 0)
+[2026-06-26T23:20:03.262+0000] {base.py:1679} ERROR - Failed to get ticker 'MSFT' reason: Expecting value: line 1 column 1 (char 0)
+[2026-06-26T23:20:03.269+0000] {base.py:1679} ERROR - Failed to get ticker 'AAPL' reason: Expecting value: line 1 column 1 (char 0)
+[2026-06-26T23:20:03.624+0000] {logging_mixin.py:151} INFO - [                       0%%                      ]
+[2026-06-26T23:20:03.633+0000] {logging_mixin.py:151} INFO - [*******************   40%%                      ]  2 of 5 completed
+[2026-06-26T23:20:03.639+0000] {logging_mixin.py:151} INFO - [**********************60%%***                   ]  3 of 5 completed
+[2026-06-26T23:20:03.975+0000] {base.py:1679} ERROR - Failed to get ticker 'AMZN' reason: Expecting value: line 1 column 1 (char 0)
+[2026-06-26T23:20:04.282+0000] {logging_mixin.py:151} INFO - [**********************80%%************          ]  4 of 5 completed
+[2026-06-26T23:20:04.288+0000] {logging_mixin.py:151} INFO - [*********************100%%**********************]  5 of 5 completed
+[2026-06-26T23:20:04.288+0000] {multi.py:182} ERROR - 
+5 Failed downloads:
+[2026-06-26T23:20:04.288+0000] {multi.py:195} ERROR - ['AAPL', 'GOOGL', 'NVDA', 'MSFT', 'AMZN']: Exception('%ticker%: No price data found, symbol may be delisted (period=5d)')
+[2026-06-26T23:20:04.329+0000] {yahoo_utils.py:25} INFO - ✅ 1min: 0 registros
+[2026-06-26T23:20:04.330+0000] {python.py:194} INFO - Done. Returned value was: []
+[2026-06-26T23:20:04.362+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yahoo_pipeline, task_id=fetch_1min, execution_date=20260626T231500, start_date=20260626T232002, end_date=20260626T232004
+[2026-06-26T23:20:04.407+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-06-26T23:20:04.441+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

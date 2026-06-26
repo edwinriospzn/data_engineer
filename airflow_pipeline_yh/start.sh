@@ -8,90 +8,57 @@ mkdir -p logs dags scripts plugins data
 sudo chmod -R 777 logs/ 2>/dev/null || true
 
 # ============================================
-# 2. Detener contenedores anteriores
+# 2. Limpiar contenedores anteriores
 # ============================================
 echo "🧹 Limpiando contenedores anteriores..."
 docker compose down -v 2>/dev/null || true
 
 # ============================================
-# 3. Levantar servicios
+# 3. Levantar SOLO bases de datos
 # ============================================
-echo "🚀 Levantando contenedores..."
-docker compose up -d --build
+echo "🚀 Levantando PostgreSQL y Redis..."
+docker compose up -d postgres redis
 
-echo "⏳ Esperando 20 segundos para que PostgreSQL y Airflow estén listos..."
-sleep 20
+echo "⏳ Esperando 15 segundos para que las bases de datos estén listas..."
+sleep 15
 
 # ============================================
-# 4. Inicializar base de datos
+# 4. Inicializar base de datos (ANTES de los workers)
 # ============================================
-echo "🔄 Inicializando base de datos..."
-docker compose exec -T airflow-webserver airflow db init 2>/dev/null || \
+echo "🔄 Inicializando base de datos de Airflow..."
 docker compose run --rm -T airflow-webserver airflow db init
 
 # ============================================
-# 5. Verificar que el webserver esté corriendo
-# ============================================
-echo "🔍 Verificando que el webserver esté corriendo..."
-RETRY=0
-while [ $RETRY -lt 10 ]; do
-    if docker compose exec -T airflow-webserver airflow info &>/dev/null; then
-        echo "✅ Webserver está corriendo"
-        break
-    fi
-    echo "⏳ Esperando webserver... (intento $((RETRY+1))/10)"
-    sleep 5
-    RETRY=$((RETRY+1))
-done
-
-# ============================================
-# 6. Crear usuario admin
+# 5. Crear usuario admin (ANTES de los workers)
 # ============================================
 echo "👤 Creando usuario admin..."
-
-docker compose exec -T airflow-webserver airflow users create \
-    --username admin \
-    --password admin123 \
-    --firstname Admin \
-    --lastname User \
-    --role Admin \
-    --email admin@example.com 2>/dev/null || \
 docker compose run --rm -T airflow-webserver airflow users create \
     --username admin \
     --password admin123 \
     --firstname Admin \
     --lastname User \
     --role Admin \
-    --email admin@example.com
+    --email admin@example.com 2>/dev/null || echo "⚠️  Usuario ya existe"
 
 # ============================================
-# 7. Verificar usuario en DB
+# 6. Verificar usuario en DB
 # ============================================
 echo "🔍 Verificando usuario en base de datos..."
-USER_EXISTS=$(docker compose exec -T postgres psql -U airflow -d airflow -t -c "SELECT COUNT(*) FROM ab_user WHERE username = 'admin';" 2>/dev/null | tr -d ' ')
-
-if [ "$USER_EXISTS" = "1" ]; then
-    echo "✅ Usuario admin verificado correctamente"
-else
-    echo "❌ ERROR: Usuario admin NO se creó."
-fi
-
-echo "📋 Usuarios en la base de datos:"
 docker compose exec -T postgres psql -U airflow -d airflow -c "SELECT id, username, email FROM ab_user;"
 
 # ============================================
-# 8. Reiniciar webserver
+# 7. Ahora sí, levantar todos los servicios de Airflow
 # ============================================
-echo "🔄 Reiniciando webserver para aplicar cambios..."
-docker compose restart airflow-webserver
+echo "🚀 Levantando Airflow (webserver, scheduler, workers)..."
+docker compose up -d
 
-echo "⏳ Esperando 15 segundos para que el webserver reinicie..."
-sleep 15
+echo "⏳ Esperando 20 segundos para que Airflow esté listo..."
+sleep 20
 
 # ============================================
-# 9. Esperar a que el scheduler esté saludable (¡NUEVO!)
+# 8. Verificar que el scheduler esté saludable
 # ============================================
-echo "⏳ Esperando que el scheduler esté saludable..."
+echo "🔍 Verificando estado del scheduler..."
 SCHEDULER_RETRY=0
 while [ $SCHEDULER_RETRY -lt 10 ]; do
     HEALTH=$(docker compose exec -T airflow-webserver curl -s http://localhost:8080/health 2>/dev/null)
@@ -109,7 +76,7 @@ if [ $SCHEDULER_RETRY -eq 10 ]; then
 fi
 
 # ============================================
-# 10. Test de conexión final
+# 9. Test de conexión final
 # ============================================
 echo "🔍 Verificando conexión a Airflow..."
 
@@ -136,7 +103,7 @@ if [ "$HTTP_CODE" != "200" ]; then
 fi
 
 # ============================================
-# 11. Mostrar información final
+# 10. Mostrar información final
 # ============================================
 echo ""
 echo "=========================================="

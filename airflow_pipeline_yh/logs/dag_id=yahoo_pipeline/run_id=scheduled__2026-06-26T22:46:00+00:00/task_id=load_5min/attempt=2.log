@@ -1,0 +1,23 @@
+[2026-06-26T22:48:48.735+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T22:46:00+00:00 [queued]>
+[2026-06-26T22:48:48.748+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T22:46:00+00:00 [queued]>
+[2026-06-26T22:48:48.748+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2026-06-26T22:48:48.764+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_5min> on 2026-06-26 22:46:00+00:00
+[2026-06-26T22:48:48.775+0000] {standard_task_runner.py:57} INFO - Started process 163 to run task
+[2026-06-26T22:48:48.783+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'load_5min', 'scheduled__2026-06-26T22:46:00+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmpg24n1sw5']
+[2026-06-26T22:48:48.787+0000] {standard_task_runner.py:85} INFO - Job 55: Subtask load_5min
+[2026-06-26T22:48:48.807+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T22:48:48.867+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T22:46:00+00:00 [running]> on host f25632e5bd23
+[2026-06-26T22:48:48.971+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='load_5min' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T22:46:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T22:46:00+00:00'
+[2026-06-26T22:48:48.972+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: insert_intraday() missing 1 required positional argument: 'records'
+[2026-06-26T22:48:48.984+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=yahoo_pipeline, task_id=load_5min, execution_date=20260626T224600, start_date=20260626T224848, end_date=20260626T224848
+[2026-06-26T22:48:48.997+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 55 for task load_5min (insert_intraday() missing 1 required positional argument: 'records'; 163)
+[2026-06-26T22:48:49.035+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2026-06-26T22:48:49.058+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

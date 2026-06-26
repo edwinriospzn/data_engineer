@@ -14,16 +14,48 @@ default_args = {
     'retry_delay': timedelta(minutes=1),
 }
 
+# ============================================
+# FUNCIONES LOAD (Puente entre XCom y DB)
+# ============================================
+
+def load_data_1min(**context):
+    ti = context['ti']
+    records = ti.xcom_pull(task_ids='fetch_1min')
+    if records:
+        insert_intraday(records, 'raw_intraday_1min')
+    else:
+        raise ValueError("No se recibieron datos de fetch_1min")
+
+def load_data_5min(**context):
+    ti = context['ti']
+    records = ti.xcom_pull(task_ids='fetch_5min')
+    if records:
+        insert_intraday(records, 'raw_intraday_5min')
+    else:
+        raise ValueError("No se recibieron datos de fetch_5min")
+
+def load_fundamental_data(**context):
+    ti = context['ti']
+    records = ti.xcom_pull(task_ids='fetch_fundamental')
+    if records:
+        insert_fundamental(records)
+    else:
+        raise ValueError("No se recibieron datos fundamentales")
+
+# ============================================
+# DAG
+# ============================================
+
 dag = DAG(
     'yahoo_pipeline',
     default_args=default_args,
-    schedule_interval='*/1 * * * *',
+    schedule_interval='*/5 * * * *',
     catchup=False,
     max_active_runs=1
 )
 
 # ============================================
-# TAREAS
+# TAREAS FETCH
 # ============================================
 
 fetch_1min = PythonOperator(
@@ -46,23 +78,25 @@ fetch_fund = PythonOperator(
     dag=dag,
 )
 
+# ============================================
+# TAREAS LOAD
+# ============================================
+
 load_1min = PythonOperator(
     task_id='load_1min',
-    python_callable=insert_intraday,
-    op_kwargs={'table_name': 'raw_intraday_1min'},
+    python_callable=load_data_1min,
     dag=dag,
 )
 
 load_5min = PythonOperator(
     task_id='load_5min',
-    python_callable=insert_intraday,
-    op_kwargs={'table_name': 'raw_intraday_5min'},
+    python_callable=load_data_5min,
     dag=dag,
 )
 
 load_fund = PythonOperator(
     task_id='load_fundamental',
-    python_callable=insert_fundamental,
+    python_callable=load_fundamental_data,
     dag=dag,
 )
 

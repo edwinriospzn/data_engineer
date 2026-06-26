@@ -1,0 +1,100 @@
+[2026-06-26T20:40:00.996+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2026-06-26T20:40:00.997+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2026-06-26T20:40:00.997+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-06-26T20:40:00.998+0000] {manager.py:759} INFO - Searching for files in /opt/airflow/dags
+[2026-06-26T20:40:00.999+0000] {manager.py:762} INFO - There are 1 files in /opt/airflow/dags
+[2026-06-26T20:40:01.601+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/yahoo_pipeline.py     28  0.21s             0           0
+================================================================================
+[2026-06-26T20:40:31.879+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  4.49s           2026-06-26T20:40:05
+================================================================================
+[2026-06-26T20:41:02.028+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  6.18s           2026-06-26T20:40:42
+================================================================================
+[2026-06-26T20:41:08.736+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
+[2026-06-26T20:41:34.880+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2026-06-26T20:41:34.881+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2026-06-26T20:41:34.881+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-06-26T20:41:34.882+0000] {manager.py:759} INFO - Searching for files in /opt/airflow/dags
+[2026-06-26T20:41:34.884+0000] {manager.py:762} INFO - There are 1 files in /opt/airflow/dags
+[2026-06-26T20:41:35.016+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  ----------
+/opt/airflow/dags/yahoo_pipeline.py     29  0.09s             0           0
+================================================================================
+[2026-06-26T20:42:05.202+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  1.73s           2026-06-26T20:41:36
+================================================================================
+[2026-06-26T20:42:35.469+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.72s           2026-06-26T20:42:07
+================================================================================
+[2026-06-26T20:43:05.724+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.74s           2026-06-26T20:42:38
+================================================================================
+[2026-06-26T20:43:36.094+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.56s           2026-06-26T20:43:09
+================================================================================
+[2026-06-26T20:44:06.312+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.62s           2026-06-26T20:43:40
+================================================================================
+[2026-06-26T20:44:36.649+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.48s           2026-06-26T20:44:10
+================================================================================
+[2026-06-26T20:45:06.890+0000] {manager.py:893} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                            PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/yahoo_pipeline.py                           0           1  0.63s           2026-06-26T20:44:41
+================================================================================
+[2026-06-26T20:45:21.676+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15

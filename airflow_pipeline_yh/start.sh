@@ -49,7 +49,6 @@ done
 # ============================================
 echo "👤 Creando usuario admin..."
 
-# Crear usuario con el webserver
 docker compose exec -T airflow-webserver airflow users create \
     --username admin \
     --password admin123 \
@@ -66,10 +65,9 @@ docker compose run --rm -T airflow-webserver airflow users create \
     --email admin@example.com
 
 # ============================================
-# 7. Verificar que el usuario se creó
+# 7. Verificar usuario en DB
 # ============================================
 echo "🔍 Verificando usuario en base de datos..."
-
 USER_EXISTS=$(docker compose exec -T postgres psql -U airflow -d airflow -t -c "SELECT COUNT(*) FROM ab_user WHERE username = 'admin';" 2>/dev/null | tr -d ' ')
 
 if [ "$USER_EXISTS" = "1" ]; then
@@ -78,14 +76,11 @@ else
     echo "❌ ERROR: Usuario admin NO se creó."
 fi
 
-# ============================================
-# 8. Mostrar usuarios
-# ============================================
 echo "📋 Usuarios en la base de datos:"
 docker compose exec -T postgres psql -U airflow -d airflow -c "SELECT id, username, email FROM ab_user;"
 
 # ============================================
-# 9. Reiniciar webserver
+# 8. Reiniciar webserver
 # ============================================
 echo "🔄 Reiniciando webserver para aplicar cambios..."
 docker compose restart airflow-webserver
@@ -94,7 +89,27 @@ echo "⏳ Esperando 15 segundos para que el webserver reinicie..."
 sleep 15
 
 # ============================================
-# 10. Test de conexión (con 127.0.0.1 para evitar DNS)
+# 9. Esperar a que el scheduler esté saludable (¡NUEVO!)
+# ============================================
+echo "⏳ Esperando que el scheduler esté saludable..."
+SCHEDULER_RETRY=0
+while [ $SCHEDULER_RETRY -lt 10 ]; do
+    HEALTH=$(docker compose exec -T airflow-webserver curl -s http://localhost:8080/health 2>/dev/null)
+    if echo "$HEALTH" | grep -q '"scheduler".*"status": "healthy"'; then
+        echo "✅ Scheduler está saludable"
+        break
+    fi
+    echo "⏳ Esperando scheduler... (intento $((SCHEDULER_RETRY+1))/10)"
+    sleep 5
+    SCHEDULER_RETRY=$((SCHEDULER_RETRY+1))
+done
+
+if [ $SCHEDULER_RETRY -eq 10 ]; then
+    echo "⚠️  Scheduler no respondió. Puedes verificar con: docker compose logs airflow-scheduler"
+fi
+
+# ============================================
+# 10. Test de conexión final
 # ============================================
 echo "🔍 Verificando conexión a Airflow..."
 

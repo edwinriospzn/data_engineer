@@ -1142,3 +1142,391 @@ Traceback (most recent call last):
 TypeError: 'type' object is not subscriptable
 [2026-06-26T21:52:00.395+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
 [2026-06-26T21:52:00.413+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.563 seconds
+[2026-06-26T21:52:30.594+0000] {processor.py:157} INFO - Started process (PID=45) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:52:30.595+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:52:30.600+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:52:30.599+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:52:31.050+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:52:31.048+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:52:31.051+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:52:31.074+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.488 seconds
+[2026-06-26T21:53:01.391+0000] {processor.py:157} INFO - Started process (PID=47) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:01.397+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:53:01.414+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:53:01.413+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:01.943+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:53:01.940+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:53:01.944+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:01.965+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.605 seconds
+[2026-06-26T21:53:32.053+0000] {processor.py:157} INFO - Started process (PID=49) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:32.054+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:53:32.056+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:53:32.055+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:32.644+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:53:32.642+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:53:32.644+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:53:32.663+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.613 seconds
+[2026-06-26T21:54:02.946+0000] {processor.py:157} INFO - Started process (PID=51) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:02.946+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:54:02.951+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:54:02.949+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:03.744+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:54:03.742+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:54:03.746+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:03.777+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.835 seconds
+[2026-06-26T21:54:34.026+0000] {processor.py:157} INFO - Started process (PID=53) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:34.027+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:54:34.030+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:54:34.030+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:34.618+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:54:34.614+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:54:34.619+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:54:34.663+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.647 seconds
+[2026-06-26T21:55:04.994+0000] {processor.py:157} INFO - Started process (PID=55) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:04.996+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:55:04.998+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:55:04.998+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:05.413+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:55:05.411+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:55:05.413+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:05.432+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.442 seconds
+[2026-06-26T21:55:35.600+0000] {processor.py:157} INFO - Started process (PID=57) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:35.603+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:55:35.608+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:55:35.607+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:36.113+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:55:36.111+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:55:36.114+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:55:36.142+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.557 seconds
+[2026-06-26T21:56:06.445+0000] {processor.py:157} INFO - Started process (PID=59) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:06.446+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:56:06.449+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:56:06.448+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:06.895+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:56:06.894+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:56:06.896+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:06.919+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.477 seconds
+[2026-06-26T21:56:37.229+0000] {processor.py:157} INFO - Started process (PID=61) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:37.233+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:56:37.239+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:56:37.238+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:37.658+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:56:37.657+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:56:37.659+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:56:37.680+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.462 seconds
+[2026-06-26T21:57:07.976+0000] {processor.py:157} INFO - Started process (PID=63) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:07.979+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:57:07.990+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:57:07.988+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:08.569+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:57:08.565+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:57:08.570+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:08.592+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.630 seconds
+[2026-06-26T21:57:38.876+0000] {processor.py:157} INFO - Started process (PID=65) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:38.883+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:57:38.892+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:57:38.891+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:39.453+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:57:39.451+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:57:39.453+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:57:39.482+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.637 seconds
+[2026-06-26T21:58:09.709+0000] {processor.py:157} INFO - Started process (PID=67) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:09.711+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:58:09.715+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:58:09.714+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:10.456+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:58:10.454+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:58:10.457+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:10.501+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.797 seconds
+[2026-06-26T21:58:40.725+0000] {processor.py:157} INFO - Started process (PID=69) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:40.726+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:58:40.730+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:58:40.729+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:41.303+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:58:41.301+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/yahoo_pipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 7, in <module>
+    from yahoo_utils import fetch_intraday_data, fetch_fundamental_data
+  File "/opt/airflow/scripts/yahoo_utils.py", line 1, in <module>
+    import yfinance as yf
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/__init__.py", line 24, in <module>
+    from .tickers import Tickers
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/tickers.py", line 24, in <module>
+    from . import Ticker, multi
+  File "/home/airflow/.local/lib/python3.8/site-packages/yfinance/multi.py", line 28, in <module>
+    import multitasking as _multitasking
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 36, in <module>
+    class PoolConfig(TypedDict):
+  File "/home/airflow/.local/lib/python3.8/site-packages/multitasking/__init__.py", line 44, in PoolConfig
+    engine: Union[type[Thread], type[Process]]  # Execution engine
+TypeError: 'type' object is not subscriptable
+[2026-06-26T21:58:41.303+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:58:41.331+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.610 seconds
+[2026-06-26T21:59:11.610+0000] {processor.py:157} INFO - Started process (PID=71) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T21:59:11.615+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T21:59:11.623+0000] {logging_mixin.py:151} INFO - [2026-06-26T21:59:11.622+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:11.103+0000] {processor.py:157} INFO - Started process (PID=25) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:11.104+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:12:11.107+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:11.106+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:12.252+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:12.756+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.756+0000] {manager.py:499} INFO - Created Permission View: %s
+[2026-06-26T22:12:12.781+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.780+0000] {manager.py:499} INFO - Created Permission View: %s
+[2026-06-26T22:12:12.800+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.799+0000] {manager.py:499} INFO - Created Permission View: %s
+[2026-06-26T22:12:12.801+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.800+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:yahoo_pipeline' as access control is unset.
+[2026-06-26T22:12:12.802+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.801+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:12:12.826+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.825+0000] {dag.py:2937} INFO - Creating ORM DAG for yahoo_pipeline
+[2026-06-26T22:12:12.848+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:12.848+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:11:00+00:00, run_after=2026-06-26T22:12:00+00:00
+[2026-06-26T22:12:12.868+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 1.769 seconds
+[2026-06-26T22:12:43.135+0000] {processor.py:157} INFO - Started process (PID=27) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:43.138+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:12:43.143+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:43.142+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:43.784+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:12:43.806+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:43.806+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:12:43.826+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:12:43.826+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:11:00+00:00, run_after=2026-06-26T22:12:00+00:00
+[2026-06-26T22:12:43.843+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.714 seconds
+[2026-06-26T22:13:14.082+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:14.083+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:13:14.086+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:14.085+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:14.579+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:14.602+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:14.602+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:13:14.626+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:14.626+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:12:00+00:00, run_after=2026-06-26T22:13:00+00:00
+[2026-06-26T22:13:14.642+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.564 seconds
+[2026-06-26T22:13:44.844+0000] {processor.py:157} INFO - Started process (PID=31) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:44.847+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:13:44.852+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:44.852+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:45.488+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:13:45.521+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:45.520+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:13:45.551+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:13:45.551+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:12:00+00:00, run_after=2026-06-26T22:13:00+00:00
+[2026-06-26T22:13:45.580+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.747 seconds
+[2026-06-26T22:14:15.917+0000] {processor.py:157} INFO - Started process (PID=33) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:15.921+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:14:15.930+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:15.929+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:16.654+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:16.676+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:16.675+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:14:16.696+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:16.696+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:13:00+00:00, run_after=2026-06-26T22:14:00+00:00
+[2026-06-26T22:14:16.712+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.809 seconds
+[2026-06-26T22:14:46.991+0000] {processor.py:157} INFO - Started process (PID=35) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:46.996+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-26T22:14:47.004+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:47.003+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:47.471+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-26T22:14:47.496+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:47.495+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-26T22:14:47.523+0000] {logging_mixin.py:151} INFO - [2026-06-26T22:14:47.522+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-26T22:13:00+00:00, run_after=2026-06-26T22:14:00+00:00
+[2026-06-26T22:14:47.547+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.569 seconds

@@ -1,0 +1,35 @@
+[2026-06-22T04:29:16.180+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-22T04:29:16.211+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: practica_pagila_operator.crear_tabla_sugerencias manual__2026-06-22T04:29:14.839466+00:00 [queued]>
+[2026-06-22T04:29:16.219+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: practica_pagila_operator.crear_tabla_sugerencias manual__2026-06-22T04:29:14.839466+00:00 [queued]>
+[2026-06-22T04:29:16.220+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2026-06-22T04:29:16.234+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): crear_tabla_sugerencias> on 2026-06-22 04:29:14.839466+00:00
+[2026-06-22T04:29:16.247+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=193) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-22T04:29:16.248+0000] {standard_task_runner.py:72} INFO - Started process 194 to run task
+[2026-06-22T04:29:16.246+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'practica_pagila_operator', 'crear_tabla_sugerencias', 'manual__2026-06-22T04:29:14.839466+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/mi_primer_dag.py', '--cfg-path', '/tmp/tmp7k06cgnq']
+[2026-06-22T04:29:16.248+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask crear_tabla_sugerencias
+[2026-06-22T04:29:16.268+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2026-06-22T04:29:16.322+0000] {task_command.py:467} INFO - Running <TaskInstance: practica_pagila_operator.crear_tabla_sugerencias manual__2026-06-22T04:29:14.839466+00:00 [running]> on host 63da282054ca
+[2026-06-22T04:29:16.470+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='edwin' AIRFLOW_CTX_DAG_ID='practica_pagila_operator' AIRFLOW_CTX_TASK_ID='crear_tabla_sugerencias' AIRFLOW_CTX_EXECUTION_DATE='2026-06-22T04:29:14.839466+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-22T04:29:14.839466+00:00'
+[2026-06-22T04:29:16.471+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-22T04:29:16.561+0000] {sql.py:278} INFO - Executing: 
+            CREATE TABLE IF NOT EXISTS sugerencias_peliculas (
+                id SERIAL PRIMARY KEY,
+                titulo VARCHAR(255) NOT NULL,
+                fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        
+[2026-06-22T04:29:16.563+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-06-22T04:29:16.564+0000] {base.py:84} INFO - Retrieving connection 'pagila_conn'
+[2026-06-22T04:29:16.569+0000] {base.py:84} INFO - Retrieving connection 'pagila_conn'
+[2026-06-22T04:29:16.579+0000] {sql.py:544} INFO - Running statement: 
+            CREATE TABLE IF NOT EXISTS sugerencias_peliculas (
+                id SERIAL PRIMARY KEY,
+                titulo VARCHAR(255) NOT NULL,
+                fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        , parameters: None
+[2026-06-22T04:29:16.632+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-22T04:29:16.632+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=practica_pagila_operator, task_id=crear_tabla_sugerencias, run_id=manual__2026-06-22T04:29:14.839466+00:00, execution_date=20260622T042914, start_date=20260622T042916, end_date=20260622T042916
+[2026-06-22T04:29:16.665+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-06-22T04:29:16.691+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-22T04:29:16.694+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

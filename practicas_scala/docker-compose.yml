@@ -1,0 +1,22 @@
+services:
+  spark-scala-notebook:
+    build: .
+    container_name: spark-scala-practicas
+    image: spark-scala-practicas:latest
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+      - JAVA_OPTS=--add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      - SPARK_OPTS=--add-exports=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED
+      - SPARK_VERSION=3.4.0
+      - SCALA_VERSION=2.13
+    volumes:
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./data:/home/jovyan/work/data
+      - ./jars:/home/jovyan/.ivy2
+      - ./docker/kernel:/home/jovyan/.config/kernel  # Montar configuración del kernel
+    command: start.sh jupyter lab --ip=0.0.0.0 --allow-root --NotebookApp.token='practicas123'
+    restart: unless-stopped

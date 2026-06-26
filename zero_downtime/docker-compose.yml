@@ -1,0 +1,111 @@
+services:
+  source:
+    image: postgres:17-alpine
+    container_name: zero_downtime_source
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sales
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d:ro
+      - source_data:/var/lib/postgresql/data
+      - ./config/postgresql_source.conf:/etc/postgresql/postgresql.conf:ro
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    networks:
+      - migration_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d sales"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  target:
+    image: postgres:17-alpine
+    container_name: zero_downtime_target
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sales
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    ports:
+      - "5435:5432"
+    volumes:
+      - target_data:/var/lib/postgresql/data
+      - ./config/postgresql_target.conf:/etc/postgresql/postgresql.conf:ro
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    networks:
+      - migration_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d sales"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: zero_downtime_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - migration_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  python-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: zero_downtime_python
+    environment:
+      SOURCE_DB_HOST: source
+      SOURCE_DB_PORT: 5432
+      SOURCE_DB_NAME: sales
+      SOURCE_DB_USER: postgres
+      SOURCE_DB_PASSWORD: postgres
+      TARGET_DB_HOST: target
+      TARGET_DB_PORT: 5432
+      TARGET_DB_NAME: sales
+      TARGET_DB_USER: postgres
+      TARGET_DB_PASSWORD: postgres
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      PYTHONUNBUFFERED: 1
+      PYTHONDONTWRITEBYTECODE: 1
+    volumes:
+      - ./scripts:/app/scripts:ro
+      - ./logs:/app/logs
+    networks:
+      - migration_network
+    depends_on:
+      source:
+        condition: service_healthy
+      target:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    profiles:
+      - python
+    stdin_open: true
+    tty: true
+    restart: "no"
+
+volumes:
+  source_data:
+  target_data:
+  redis_data:
+
+networks:
+  migration_network:
+    driver: bridge
+    name: migration_network

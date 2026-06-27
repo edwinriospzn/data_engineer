@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator, ShortCircuitOperator  # ← Importar ShortCircuitOperator
 import sys
 import json
 import os
@@ -24,79 +24,75 @@ default_args = {
 # ============================================
 
 def load_data_1min(**context):
-    """Carga datos de 1min desde archivo JSON"""
     run_id = context['run_id']
     file_path = f"{DATA_DIR}/1min_{run_id}.json"
-    
     logging.info(f"📂 Buscando archivo: {file_path}")
     
     if os.path.exists(file_path):
         with open(file_path, 'r') as f:
             records = json.load(f)
-        logging.info(f"📄 Archivo encontrado: {len(records)} registros")
-        insert_intraday(records, 'raw_intraday_1min')
-        logging.info(f"✅ Cargados {len(records)} registros de 1min")
-        os.remove(file_path)
-        logging.info(f"🗑️ Archivo eliminado: {file_path}")
-    else:
-        ti = context['ti']
-        records = ti.xcom_pull(task_ids='fetch_1min')
         if records:
-            logging.info(f"📤 Datos recuperados de XCom: {len(records)} registros")
             insert_intraday(records, 'raw_intraday_1min')
-            logging.info(f"✅ Cargados {len(records)} registros de 1min desde XCom")
+            logging.info(f"✅ Cargados {len(records)} registros de 1min")
+            os.remove(file_path)
         else:
-            raise ValueError(f"No se encontraron datos para fetch_1min (archivo: {file_path}, XCom: vacío)")
+            logging.warning("⚠️ Archivo vacío, sin datos para insertar")
+    else:
+        raise ValueError(f"Archivo no encontrado: {file_path}")
 
 def load_data_5min(**context):
-    """Carga datos de 5min desde archivo JSON"""
     run_id = context['run_id']
     file_path = f"{DATA_DIR}/5min_{run_id}.json"
-    
     logging.info(f"📂 Buscando archivo: {file_path}")
     
     if os.path.exists(file_path):
         with open(file_path, 'r') as f:
             records = json.load(f)
-        logging.info(f"📄 Archivo encontrado: {len(records)} registros")
-        insert_intraday(records, 'raw_intraday_5min')
-        logging.info(f"✅ Cargados {len(records)} registros de 5min")
-        os.remove(file_path)
-        logging.info(f"🗑️ Archivo eliminado: {file_path}")
-    else:
-        ti = context['ti']
-        records = ti.xcom_pull(task_ids='fetch_5min')
         if records:
-            logging.info(f"📤 Datos recuperados de XCom: {len(records)} registros")
             insert_intraday(records, 'raw_intraday_5min')
-            logging.info(f"✅ Cargados {len(records)} registros de 5min desde XCom")
+            logging.info(f"✅ Cargados {len(records)} registros de 5min")
+            os.remove(file_path)
         else:
-            raise ValueError(f"No se encontraron datos para fetch_5min (archivo: {file_path}, XCom: vacío)")
+            logging.warning("⚠️ Archivo vacío, sin datos para insertar")
+    else:
+        raise ValueError(f"Archivo no encontrado: {file_path}")
 
 def load_fundamental_data(**context):
-    """Carga datos fundamentales desde archivo JSON"""
     run_id = context['run_id']
     file_path = f"{DATA_DIR}/fundamental_{run_id}.json"
-    
     logging.info(f"📂 Buscando archivo: {file_path}")
     
     if os.path.exists(file_path):
         with open(file_path, 'r') as f:
             records = json.load(f)
-        logging.info(f"📄 Archivo encontrado: {len(records)} registros")
-        insert_fundamental(records)
-        logging.info(f"✅ Cargados {len(records)} registros fundamentales")
-        os.remove(file_path)
-        logging.info(f"🗑️ Archivo eliminado: {file_path}")
-    else:
-        ti = context['ti']
-        records = ti.xcom_pull(task_ids='fetch_fundamental')
         if records:
-            logging.info(f"📤 Datos recuperados de XCom: {len(records)} registros")
             insert_fundamental(records)
-            logging.info(f"✅ Cargados {len(records)} registros fundamentales desde XCom")
+            logging.info(f"✅ Cargados {len(records)} registros fundamentales")
+            os.remove(file_path)
         else:
-            raise ValueError(f"No se encontraron datos para fetch_fundamental (archivo: {file_path}, XCom: vacío)")
+            logging.warning("⚠️ Archivo vacío, sin datos para insertar")
+    else:
+        raise ValueError(f"Archivo no encontrado: {file_path}")
+
+# ============================================
+# FUNCIONES PARA FILTRAR POR TIEMPO (¡NUEVO!)
+# ============================================
+
+def should_run_5min(**context):
+    """Solo ejecuta si el minuto actual es múltiplo de 5"""
+    from datetime import datetime
+    current_minute = datetime.now().minute
+    should_run = current_minute % 5 == 0
+    logging.info(f"🕐 Minuto {current_minute}: ejecutar 5min = {should_run}")
+    return should_run
+
+def should_run_15min(**context):
+    """Solo ejecuta si el minuto actual es múltiplo de 15"""
+    from datetime import datetime
+    current_minute = datetime.now().minute
+    should_run = current_minute % 15 == 0
+    logging.info(f"🕐 Minuto {current_minute}: ejecutar fundamental = {should_run}")
+    return should_run
 
 # ============================================
 # DAG
@@ -105,7 +101,8 @@ def load_fundamental_data(**context):
 dag = DAG(
     'yahoo_pipeline',
     default_args=default_args,
-    schedule_interval='*/5 * * * *',
+    description='Pipeline Yahoo Finance: 1min, 5min y fundamentales',
+    schedule_interval='*/1 * * * *',  # Cada 1 minuto
     catchup=False,
     max_active_runs=1,
     tags=['yahoo', 'finance']
@@ -164,9 +161,32 @@ load_fund = PythonOperator(
 )
 
 # ============================================
+# TAREAS DE CONTROL (ShortCircuit) - ¡NUEVO!
+# ============================================
+
+check_5min = ShortCircuitOperator(
+    task_id='check_5min',
+    python_callable=should_run_5min,
+    provide_context=True,
+    dag=dag,
+)
+
+check_15min = ShortCircuitOperator(
+    task_id='check_15min',
+    python_callable=should_run_15min,
+    provide_context=True,
+    dag=dag,
+)
+
+# ============================================
 # DEPENDENCIAS
 # ============================================
 
+# 1min: siempre se ejecuta
 fetch_1min >> load_1min
-fetch_5min >> load_5min
-fetch_fund >> load_fund
+
+# 5min: solo si check_5min retorna True
+check_5min >> fetch_5min >> load_5min
+
+# Fundamental: solo si check_15min retorna True
+check_15min >> fetch_fund >> load_fund

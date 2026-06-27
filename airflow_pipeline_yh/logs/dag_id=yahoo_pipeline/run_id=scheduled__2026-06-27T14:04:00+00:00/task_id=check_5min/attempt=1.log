@@ -1,0 +1,19 @@
+[2026-06-27T14:05:01.746+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.check_5min scheduled__2026-06-27T14:04:00+00:00 [queued]>
+[2026-06-27T14:05:01.757+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.check_5min scheduled__2026-06-27T14:04:00+00:00 [queued]>
+[2026-06-27T14:05:01.757+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2026-06-27T14:05:01.777+0000] {taskinstance.py:1380} INFO - Executing <Task(ShortCircuitOperator): check_5min> on 2026-06-27 14:04:00+00:00
+[2026-06-27T14:05:01.785+0000] {standard_task_runner.py:57} INFO - Started process 137 to run task
+[2026-06-27T14:05:01.795+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'check_5min', 'scheduled__2026-06-27T14:04:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmpa85ym41z']
+[2026-06-27T14:05:01.801+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask check_5min
+[2026-06-27T14:05:01.822+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-27T14:05:01.878+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.check_5min scheduled__2026-06-27T14:04:00+00:00 [running]> on host 9f82a831b7eb
+[2026-06-27T14:05:01.985+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='check_5min' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T14:04:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-27T14:04:00+00:00'
+[2026-06-27T14:05:01.986+0000] {yahoo_pipeline.py:86} INFO - 🕐 Minuto 5: ejecutar 5min = True
+[2026-06-27T14:05:01.987+0000] {python.py:194} INFO - Done. Returned value was: True
+[2026-06-27T14:05:01.988+0000] {python.py:264} INFO - Condition result is True
+[2026-06-27T14:05:01.988+0000] {python.py:267} INFO - Proceeding with downstream tasks...
+[2026-06-27T14:05:02.015+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yahoo_pipeline, task_id=check_5min, execution_date=20260627T140400, start_date=20260627T140501, end_date=20260627T140502
+[2026-06-27T14:05:02.051+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-06-27T14:05:02.110+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

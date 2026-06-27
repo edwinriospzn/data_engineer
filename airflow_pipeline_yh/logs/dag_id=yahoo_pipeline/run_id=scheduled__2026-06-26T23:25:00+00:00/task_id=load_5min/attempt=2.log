@@ -1,0 +1,27 @@
+[2026-06-26T23:31:43.864+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T23:25:00+00:00 [queued]>
+[2026-06-26T23:31:43.878+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T23:25:00+00:00 [queued]>
+[2026-06-26T23:31:43.878+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2026-06-26T23:31:43.892+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_5min> on 2026-06-26 23:25:00+00:00
+[2026-06-26T23:31:43.899+0000] {standard_task_runner.py:57} INFO - Started process 75 to run task
+[2026-06-26T23:31:43.905+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'load_5min', 'scheduled__2026-06-26T23:25:00+00:00', '--job-id', '286', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmp3149eujs']
+[2026-06-26T23:31:43.909+0000] {standard_task_runner.py:85} INFO - Job 286: Subtask load_5min
+[2026-06-26T23:31:43.928+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T23:31:43.988+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.load_5min scheduled__2026-06-26T23:25:00+00:00 [running]> on host 961bab9f867c
+[2026-06-26T23:31:44.145+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='load_5min' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T23:25:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T23:25:00+00:00'
+[2026-06-26T23:31:44.152+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 43, in load_data_5min
+    records = ti.xcom_pull(task_ids='fetch_5min', dag_id=dag_id, run_id=run_id)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/utils/session.py", line 77, in wrapper
+    return func(*args, session=session, **kwargs)
+TypeError: TaskInstance.xcom_pull() got an unexpected keyword argument 'run_id'
+[2026-06-26T23:31:44.171+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=yahoo_pipeline, task_id=load_5min, execution_date=20260626T232500, start_date=20260626T233143, end_date=20260626T233144
+[2026-06-26T23:31:44.202+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 286 for task load_5min (TaskInstance.xcom_pull() got an unexpected keyword argument 'run_id'; 75)
+[2026-06-26T23:31:44.239+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2026-06-26T23:31:44.260+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

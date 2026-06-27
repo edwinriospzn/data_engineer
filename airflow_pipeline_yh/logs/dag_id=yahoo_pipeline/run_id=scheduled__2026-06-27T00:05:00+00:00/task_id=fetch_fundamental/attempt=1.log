@@ -1,0 +1,24 @@
+[2026-06-27T00:15:14.648+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-27T00:05:00+00:00 [queued]>
+[2026-06-27T00:15:14.661+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-27T00:05:00+00:00 [queued]>
+[2026-06-27T00:15:14.661+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 3
+[2026-06-27T00:15:14.675+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): fetch_fundamental> on 2026-06-27 00:05:00+00:00
+[2026-06-27T00:15:14.682+0000] {standard_task_runner.py:57} INFO - Started process 47 to run task
+[2026-06-27T00:15:14.687+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'fetch_fundamental', 'scheduled__2026-06-27T00:05:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmpjkxh89sn']
+[2026-06-27T00:15:14.692+0000] {standard_task_runner.py:85} INFO - Job 4: Subtask fetch_fundamental
+[2026-06-27T00:15:14.709+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-27T00:15:14.753+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.fetch_fundamental scheduled__2026-06-27T00:05:00+00:00 [running]> on host 67294a461383
+[2026-06-27T00:15:14.852+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='fetch_fundamental' AIRFLOW_CTX_EXECUTION_DATE='2026-06-27T00:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-27T00:05:00+00:00'
+[2026-06-27T00:15:14.855+0000] {yahoo_utils.py:63} INFO - 📊 Descargando datos fundamentales para ['AAPL', 'NVDA', 'MSFT', 'GOOGL', 'AMZN']
+[2026-06-27T00:15:15.730+0000] {yahoo_utils.py:82} ERROR - ❌ Error con AAPL: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AAPL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-27T00:15:18.171+0000] {yahoo_utils.py:82} ERROR - ❌ Error con NVDA: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/NVDA?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-27T00:15:20.546+0000] {yahoo_utils.py:82} ERROR - ❌ Error con MSFT: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/MSFT?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-27T00:15:22.969+0000] {yahoo_utils.py:82} ERROR - ❌ Error con GOOGL: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/GOOGL?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-27T00:15:25.393+0000] {yahoo_utils.py:82} ERROR - ❌ Error con AMZN: 429 Client Error: Too Many Requests for url: https://query2.finance.yahoo.com/v10/finance/quoteSummary/AMZN?modules=financialData%2CquoteType%2CdefaultKeyStatistics%2CassetProfile%2CsummaryDetail&ssl=true&crumb=Edge%3A+Too+Many+Requests
+[2026-06-27T00:15:25.394+0000] {yahoo_utils.py:88} INFO - ✅ Fundamental: 0 registros guardados en /opt/***/data/fundamental_scheduled__2026-06-27T00:05:00+00:00.json
+[2026-06-27T00:15:25.413+0000] {yahoo_utils.py:93} INFO - 📤 Fundamental: datos enviados a XCom
+[2026-06-27T00:15:25.414+0000] {python.py:194} INFO - Done. Returned value was: []
+[2026-06-27T00:15:25.438+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=yahoo_pipeline, task_id=fetch_fundamental, execution_date=20260627T000500, start_date=20260627T001514, end_date=20260627T001525
+[2026-06-27T00:15:25.499+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2026-06-27T00:15:25.523+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

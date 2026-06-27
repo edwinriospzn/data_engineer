@@ -1,0 +1,25 @@
+[2026-06-26T23:41:09.101+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: yahoo_pipeline.load_fundamental scheduled__2026-06-26T23:35:00+00:00 [queued]>
+[2026-06-26T23:41:09.112+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: yahoo_pipeline.load_fundamental scheduled__2026-06-26T23:35:00+00:00 [queued]>
+[2026-06-26T23:41:09.113+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2026-06-26T23:41:09.127+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): load_fundamental> on 2026-06-26 23:35:00+00:00
+[2026-06-26T23:41:09.136+0000] {standard_task_runner.py:57} INFO - Started process 79 to run task
+[2026-06-26T23:41:09.142+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'yahoo_pipeline', 'load_fundamental', 'scheduled__2026-06-26T23:35:00+00:00', '--job-id', '321', '--raw', '--subdir', 'DAGS_FOLDER/yahoo_pipeline.py', '--cfg-path', '/tmp/tmp3c23vdvo']
+[2026-06-26T23:41:09.147+0000] {standard_task_runner.py:85} INFO - Job 321: Subtask load_fundamental
+[2026-06-26T23:41:09.167+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.10/site-packages/***/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2026-06-26T23:41:09.231+0000] {task_command.py:415} INFO - Running <TaskInstance: yahoo_pipeline.load_fundamental scheduled__2026-06-26T23:35:00+00:00 [running]> on host 961bab9f867c
+[2026-06-26T23:41:09.336+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='yahoo_pipeline' AIRFLOW_CTX_TASK_ID='load_fundamental' AIRFLOW_CTX_EXECUTION_DATE='2026-06-26T23:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-06-26T23:35:00+00:00'
+[2026-06-26T23:41:09.350+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/yahoo_pipeline.py", line 52, in load_fundamental_data
+    raise ValueError("No se recibieron datos fundamentales")
+ValueError: No se recibieron datos fundamentales
+[2026-06-26T23:41:09.359+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=yahoo_pipeline, task_id=load_fundamental, execution_date=20260626T233500, start_date=20260626T234109, end_date=20260626T234109
+[2026-06-26T23:41:09.373+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 321 for task load_fundamental (No se recibieron datos fundamentales; 79)
+[2026-06-26T23:41:09.397+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2026-06-26T23:41:09.418+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

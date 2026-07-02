@@ -1,0 +1,64 @@
+# ============================================
+# PHYSICAL REPLICATION ONLY
+# Separate from logical replication lab
+# ============================================
+
+services:
+  physical_primary:
+    image: postgres:17-alpine
+    container_name: zero_downtime_physical_primary
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: physical_db
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    ports:
+      - "5436:5432"
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d:ro
+      - physical_primary_data:/var/lib/postgresql/data
+      - ./config/primary.conf:/etc/postgresql/postgresql.conf:ro
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    networks:
+      - physical_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d physical_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  physical_standby:
+    image: postgres:17-alpine
+    container_name: zero_downtime_physical_standby
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: physical_db
+      POSTGRES_INITDB_ARGS: "--data-checksums"
+    ports:
+      - "5437:5432"
+    volumes:
+      - physical_standby_data:/var/lib/postgresql/data
+      - ./config/standby.conf:/etc/postgresql/postgresql.conf:ro
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    networks:
+      - physical_network
+    restart: unless-stopped
+    depends_on:
+      physical_primary:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d physical_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  physical_primary_data:
+  physical_standby_data:
+
+networks:
+  physical_network:
+    driver: bridge
+    name: physical_network

@@ -2474,3 +2474,51 @@
 [2026-06-27T14:37:01.936+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:37:01.935+0000] {dag.py:2915} INFO - Sync 1 DAGs
 [2026-06-27T14:37:01.992+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:37:01.991+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:36:00+00:00, run_after=2026-06-27T14:37:00+00:00
 [2026-06-27T14:37:02.028+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.894 seconds
+[2026-06-27T14:37:32.299+0000] {processor.py:157} INFO - Started process (PID=106) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:37:32.304+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:37:32.312+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:37:32.311+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:37:32.837+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:37:32.842+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:37:32.879+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:37:32.878+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:37:32.916+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:37:32.916+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:36:00+00:00, run_after=2026-06-27T14:37:00+00:00
+[2026-06-27T14:37:32.937+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.652 seconds
+[2026-06-27T14:38:03.218+0000] {processor.py:157} INFO - Started process (PID=108) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:03.220+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:38:03.224+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:03.223+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:03.950+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:38:03.963+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:04.016+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:04.016+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:38:04.081+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:04.080+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:37:00+00:00, run_after=2026-06-27T14:38:00+00:00
+[2026-06-27T14:38:04.320+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 1.107 seconds
+[2026-06-27T14:38:34.484+0000] {processor.py:157} INFO - Started process (PID=110) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:34.486+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:38:34.492+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:34.491+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:35.167+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:38:35.179+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:38:35.219+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:35.219+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:38:35.261+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:38:35.261+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:37:00+00:00, run_after=2026-06-27T14:38:00+00:00
+[2026-06-27T14:38:35.285+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.808 seconds
+[2026-06-27T14:39:05.504+0000] {processor.py:157} INFO - Started process (PID=112) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:05.506+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:39:05.508+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:05.508+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:06.229+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:39:06.236+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:06.279+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:06.278+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:39:06.318+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:06.318+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:38:00+00:00, run_after=2026-06-27T14:39:00+00:00
+[2026-06-27T14:39:06.346+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.851 seconds
+[2026-06-27T14:39:36.574+0000] {processor.py:157} INFO - Started process (PID=114) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:36.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:39:36.578+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:36.578+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:37.066+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:39:37.073+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:39:37.105+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:37.104+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:39:37.137+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:39:37.137+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:38:00+00:00, run_after=2026-06-27T14:39:00+00:00
+[2026-06-27T14:39:37.163+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.593 seconds
+[2026-06-27T14:40:07.405+0000] {processor.py:157} INFO - Started process (PID=116) to work on /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:40:07.406+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/yahoo_pipeline.py for tasks to queue
+[2026-06-27T14:40:07.408+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:40:07.408+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:40:07.936+0000] {logging_mixin.py:151} WARNING - /home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py:259 RemovedInAirflow3Warning: provide_context is deprecated as of 2.0 and is no longer required
+[2026-06-27T14:40:07.941+0000] {processor.py:839} INFO - DAG(s) dict_keys(['yahoo_pipeline']) retrieved from /opt/airflow/dags/yahoo_pipeline.py
+[2026-06-27T14:40:07.966+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:40:07.965+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2026-06-27T14:40:07.990+0000] {logging_mixin.py:151} INFO - [2026-06-27T14:40:07.990+0000] {dag.py:3696} INFO - Setting next_dagrun for yahoo_pipeline to 2026-06-27T14:39:00+00:00, run_after=2026-06-27T14:40:00+00:00
+[2026-06-27T14:40:08.203+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/yahoo_pipeline.py took 0.801 seconds

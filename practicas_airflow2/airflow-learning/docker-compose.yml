@@ -16,6 +16,23 @@ services:
       timeout: 5s
       retries: 5
 
+  etl-postgres:
+    image: postgres:16
+    container_name: airflow-etl-postgres
+    environment:
+      POSTGRES_USER: etl_user
+      POSTGRES_PASSWORD: etl_pass
+      POSTGRES_DB: dbdags
+    ports:
+      - "5433:5432"
+    volumes:
+      - etl-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U etl_user -d dbdags"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   pgadmin:
     image: dpage/pgadmin4:8
     container_name: airflow-pgadmin
@@ -119,3 +136,4 @@ services:
 
 volumes:
   postgres-data:
+  etl-postgres-data:

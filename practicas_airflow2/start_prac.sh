@@ -20,7 +20,7 @@ fi
 
 mkdir -p "$ROOT_DIR"/logs "$ROOT_DIR"/plugins "$ROOT_DIR"/dags "$ROOT_DIR"/data "$ROOT_DIR"/sql "$ROOT_DIR"/spark
 
-docker compose up -d postgres pgadmin airflow python-dev
+docker compose up -d postgres pgadmin airflow-init airflow-webserver airflow-scheduler python-dev
 
 echo ""
 echo "Airflow UI: http://localhost:8080"

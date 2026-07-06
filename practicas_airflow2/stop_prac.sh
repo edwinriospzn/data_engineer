@@ -8,6 +8,6 @@ if [ -z "${DOCKER_HOST:-}" ] && [ -S /var/run/docker.sock ]; then
   export DOCKER_HOST="unix:///var/run/docker.sock"
 fi
 
-docker compose down --volumes
+docker compose down --remove-orphans --volumes
 
 echo "All practice containers and volumes have been stopped and removed."

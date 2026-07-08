@@ -1,0 +1,18 @@
+[2026-07-08T21:29:44.517+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-08T21:29:44.539+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 02_sql_transform.load_products manual__2026-07-08T21:29:39.097442+00:00 [queued]>
+[2026-07-08T21:29:44.550+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 02_sql_transform.load_products manual__2026-07-08T21:29:39.097442+00:00 [queued]>
+[2026-07-08T21:29:44.551+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-08T21:29:44.568+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): load_products> on 2026-07-08 21:29:39.097442+00:00
+[2026-07-08T21:29:44.580+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4171) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-08T21:29:44.579+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '02_sql_transform', 'load_products', 'manual__2026-07-08T21:29:39.097442+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/02_sql_transform.py', '--cfg-path', '/tmp/tmpfowoiy6w']
+[2026-07-08T21:29:44.582+0000] {standard_task_runner.py:105} INFO - Job 33: Subtask load_products
+[2026-07-08T21:29:44.582+0000] {standard_task_runner.py:72} INFO - Started process 4173 to run task
+[2026-07-08T21:29:44.649+0000] {task_command.py:467} INFO - Running <TaskInstance: 02_sql_transform.load_products manual__2026-07-08T21:29:39.097442+00:00 [running]> on host 5fa44fd9c86a
+[2026-07-08T21:29:44.786+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='02_sql_transform' AIRFLOW_CTX_TASK_ID='load_products' AIRFLOW_CTX_EXECUTION_DATE='2026-07-08T21:29:39.097442+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-08T21:29:39.097442+00:00'
+[2026-07-08T21:29:44.787+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-08T21:29:44.830+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-08T21:29:44.847+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-08T21:29:44.847+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=02_sql_transform, task_id=load_products, run_id=manual__2026-07-08T21:29:39.097442+00:00, execution_date=20260708T212939, start_date=20260708T212944, end_date=20260708T212944
+[2026-07-08T21:29:44.880+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-08T21:29:44.912+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-08T21:29:44.914+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

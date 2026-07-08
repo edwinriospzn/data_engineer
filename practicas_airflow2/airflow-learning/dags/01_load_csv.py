@@ -29,7 +29,8 @@ def create_customers_table():
             CREATE TABLE IF NOT EXISTS customers (
                 customer_id INTEGER PRIMARY KEY,
                 name TEXT,
-                city TEXT
+                city TEXT,
+                loaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
             """
         )

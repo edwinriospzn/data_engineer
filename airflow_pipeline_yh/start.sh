@@ -1,3 +1,4 @@
+
 #!/bin/bash
 echo "🚀 Iniciando Pipeline Yahoo Finance"
 

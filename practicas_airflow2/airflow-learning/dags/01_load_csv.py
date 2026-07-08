@@ -7,7 +7,7 @@ from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 
-CSV_PATH = Path(__file__).resolve().parents[1] / "data" / "customers.csv"
+CSV_PATH = Path(__file__).resolve().parents[1] / "data"/ "01" / "customers.csv"
 DB_HOST = "etl-postgres"
 DB_PORT = 5432
 DB_NAME = "dbdags"
@@ -26,7 +26,7 @@ def create_customers_table():
     with conn.cursor() as cur:
         cur.execute(
             """
-            CREATE TABLE IF NOT EXISTS customers (
+            CREATE TABLE IF NOT EXISTS t01_customers (
                 customer_id INTEGER PRIMARY KEY,
                 name TEXT,
                 city TEXT,
@@ -44,8 +44,8 @@ def insert_customers(**context):
     with conn.cursor() as cur:
         for row in rows:
             cur.execute(
-                "INSERT INTO customers (customer_id, name, city) VALUES (%s, %s, %s) ON CONFLICT (customer_id) DO NOTHING",
-                (int(row["customer_id"]), row["name"], row["city"]),
+                "INSERT INTO t01_customers (customer_id, name, city, loaded_at) VALUES (%s, %s, %s, %s) ON CONFLICT (customer_id) DO NOTHING",
+                (int(row["customer_id"]), row["name"], row["city"], datetime.now()),
             )
     conn.commit()
     conn.close()

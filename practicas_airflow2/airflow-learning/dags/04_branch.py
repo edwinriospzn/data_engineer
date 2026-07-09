@@ -216,6 +216,7 @@ with DAG(
         task_id="generate_summary",
         python_callable=generate_summary,
         provide_context=True,
+        trigger_rule="all_done",
     )
     
     end = EmptyOperator(task_id="end")

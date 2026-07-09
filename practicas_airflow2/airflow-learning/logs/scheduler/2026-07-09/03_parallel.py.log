@@ -1035,3 +1035,101 @@
 [2026-07-09T01:35:36.633+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:35:36.633+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-07-09T01:35:36.664+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:35:36.663+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
 [2026-07-09T01:35:36.693+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.169 seconds
+[2026-07-09T01:36:07.270+0000] {processor.py:186} INFO - Started process (PID=3119) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:07.271+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:36:07.274+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:07.273+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:07.297+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:07.356+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:07.355+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:36:07.382+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:07.381+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:36:07.417+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.160 seconds
+[2026-07-09T01:36:38.046+0000] {processor.py:186} INFO - Started process (PID=3139) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:38.048+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:36:38.051+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:38.051+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:38.069+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:36:38.143+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:38.142+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:36:38.175+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:36:38.174+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:36:38.208+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.179 seconds
+[2026-07-09T01:37:09.136+0000] {processor.py:186} INFO - Started process (PID=3162) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:09.137+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:37:09.140+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:09.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:09.160+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:09.237+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:09.237+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:37:09.269+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:09.268+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:37:09.317+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.189 seconds
+[2026-07-09T01:37:40.173+0000] {processor.py:186} INFO - Started process (PID=3189) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:40.174+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:37:40.177+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:40.177+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:40.190+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:37:40.226+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:40.225+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:37:40.241+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:37:40.241+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:37:40.268+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.104 seconds
+[2026-07-09T01:38:11.059+0000] {processor.py:186} INFO - Started process (PID=3214) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:11.061+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:38:11.067+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:11.065+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:11.100+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:11.163+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:11.162+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:38:11.190+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:11.189+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:38:11.216+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.178 seconds
+[2026-07-09T01:38:42.135+0000] {processor.py:186} INFO - Started process (PID=3248) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:42.138+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:38:42.141+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:42.141+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:42.159+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:38:42.242+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:42.241+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:38:42.270+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:38:42.269+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:38:42.311+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.189 seconds
+[2026-07-09T01:39:12.781+0000] {processor.py:186} INFO - Started process (PID=3271) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:12.782+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:39:12.785+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:12.784+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:12.799+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:12.841+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:12.841+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:39:12.856+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:12.856+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:39:12.878+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.108 seconds
+[2026-07-09T01:39:43.637+0000] {processor.py:186} INFO - Started process (PID=3296) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:43.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:39:43.644+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:43.643+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:43.658+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:39:43.697+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:43.697+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:39:43.715+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:39:43.715+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:39:43.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.117 seconds
+[2026-07-09T01:40:14.444+0000] {processor.py:186} INFO - Started process (PID=3321) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:14.445+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:40:14.448+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:14.447+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:14.459+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:14.501+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:14.501+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:40:14.518+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:14.518+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:40:14.539+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.104 seconds
+[2026-07-09T01:40:45.216+0000] {processor.py:186} INFO - Started process (PID=3346) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:45.217+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:40:45.220+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:45.220+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:45.232+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:40:45.267+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:45.267+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:40:45.284+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:40:45.284+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:40:45.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.097 seconds
+[2026-07-09T01:41:15.998+0000] {processor.py:186} INFO - Started process (PID=3373) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:15.999+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:41:16.002+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:16.002+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:16.018+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:16.057+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:16.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:41:16.074+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:16.073+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:41:16.094+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.105 seconds
+[2026-07-09T01:41:46.881+0000] {processor.py:186} INFO - Started process (PID=3398) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:46.882+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:41:46.886+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:46.885+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:46.901+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:41:46.952+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:46.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:41:46.973+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:41:46.973+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:41:46.999+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.128 seconds
+[2026-07-09T01:42:17.851+0000] {processor.py:186} INFO - Started process (PID=3423) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:17.853+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:42:17.859+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:17.858+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:17.889+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:17.965+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:17.965+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:42:18.001+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:18.000+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:42:18.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.216 seconds
+[2026-07-09T01:42:48.543+0000] {processor.py:186} INFO - Started process (PID=3446) to work on /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:48.545+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/03_parallel.py for tasks to queue
+[2026-07-09T01:42:48.548+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:48.547+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:48.563+0000] {processor.py:925} INFO - DAG(s) '03_parallel' retrieved from /opt/airflow/dags/03_parallel.py
+[2026-07-09T01:42:48.656+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:48.656+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T01:42:48.709+0000] {logging_mixin.py:190} INFO - [2026-07-09T01:42:48.709+0000] {dag.py:4180} INFO - Setting next_dagrun for 03_parallel to None, run_after=None
+[2026-07-09T01:42:48.924+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/03_parallel.py took 0.389 seconds

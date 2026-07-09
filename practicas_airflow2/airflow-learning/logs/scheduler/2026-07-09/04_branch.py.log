@@ -1687,3 +1687,409 @@
 [2026-07-09T16:36:33.235+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:36:33.235+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-07-09T16:36:33.260+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:36:33.260+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
 [2026-07-09T16:36:33.295+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.210 seconds
+[2026-07-09T16:37:03.927+0000] {processor.py:186} INFO - Started process (PID=6028) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:03.928+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:37:03.931+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:03.931+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:03.947+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:04.006+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:04.006+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:37:04.027+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:04.027+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:37:04.061+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.152 seconds
+[2026-07-09T16:37:34.983+0000] {processor.py:186} INFO - Started process (PID=6058) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:34.985+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:37:34.998+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:34.998+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:35.034+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:37:35.124+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:35.123+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:37:35.173+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:37:35.172+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:37:35.206+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.249 seconds
+[2026-07-09T16:38:05.972+0000] {processor.py:186} INFO - Started process (PID=6088) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:05.974+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:38:05.978+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:05.978+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:05.995+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:06.057+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:06.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:38:06.084+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:06.083+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:38:06.117+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.162 seconds
+[2026-07-09T16:38:36.749+0000] {processor.py:186} INFO - Started process (PID=6118) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:36.753+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:38:36.762+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:36.761+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:36.784+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:38:36.829+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:36.829+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:38:36.854+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:38:36.854+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:38:36.887+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.174 seconds
+[2026-07-09T16:39:07.155+0000] {processor.py:186} INFO - Started process (PID=6154) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:07.158+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:39:07.167+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:07.166+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:07.192+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:07.283+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:07.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:39:07.332+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:07.331+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:39:07.397+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.267 seconds
+[2026-07-09T16:39:38.080+0000] {processor.py:186} INFO - Started process (PID=6184) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:38.082+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:39:38.085+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:38.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:38.099+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:39:38.149+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:38.148+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:39:38.168+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:39:38.168+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:39:38.191+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.120 seconds
+[2026-07-09T16:40:09.075+0000] {processor.py:186} INFO - Started process (PID=6214) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:09.079+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:40:09.091+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:09.090+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:09.133+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:09.276+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:09.275+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:40:09.340+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:09.339+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:40:09.423+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.397 seconds
+[2026-07-09T16:40:40.476+0000] {processor.py:186} INFO - Started process (PID=6244) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:40.479+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:40:40.487+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:40.486+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:40.516+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:40:40.580+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:40.580+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:40:40.608+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:40:40.608+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:40:40.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.192 seconds
+[2026-07-09T16:41:10.872+0000] {processor.py:186} INFO - Started process (PID=6274) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:10.876+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:41:10.891+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:10.890+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:10.924+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:11.050+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:11.050+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:41:11.098+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:11.097+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:41:11.154+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.311 seconds
+[2026-07-09T16:41:41.676+0000] {processor.py:186} INFO - Started process (PID=6304) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:41.678+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:41:41.683+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:41.682+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:41.697+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:41:41.742+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:41.742+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:41:41.760+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:41:41.760+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:41:41.782+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.121 seconds
+[2026-07-09T16:42:12.126+0000] {processor.py:186} INFO - Started process (PID=6334) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:12.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:42:12.133+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:12.133+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:12.148+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:12.192+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:12.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:42:12.214+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:12.214+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:42:12.243+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.130 seconds
+[2026-07-09T16:42:43.097+0000] {processor.py:186} INFO - Started process (PID=6364) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:43.099+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:42:43.107+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:43.106+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:43.123+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:42:43.169+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:43.168+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:42:43.190+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:42:43.190+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:42:43.216+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.138 seconds
+[2026-07-09T16:43:13.347+0000] {processor.py:186} INFO - Started process (PID=6394) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:13.352+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:43:13.365+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:13.363+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:13.415+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:13.582+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:13.581+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:43:13.641+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:13.640+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:43:13.693+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.385 seconds
+[2026-07-09T16:43:44.012+0000] {processor.py:186} INFO - Started process (PID=6424) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:44.013+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:43:44.022+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:44.019+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:44.038+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:43:44.083+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:44.082+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:43:44.104+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:43:44.103+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:43:44.127+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.134 seconds
+[2026-07-09T16:44:14.202+0000] {processor.py:186} INFO - Started process (PID=6454) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:14.204+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:44:14.211+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:14.210+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:14.233+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:14.287+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:14.286+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:44:14.304+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:14.304+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:44:14.323+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.139 seconds
+[2026-07-09T16:44:44.546+0000] {processor.py:186} INFO - Started process (PID=6484) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:44.552+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:44:44.569+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:44.566+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:44.623+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:44:44.752+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:44.751+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:44:44.786+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:44:44.785+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:44:44.833+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.325 seconds
+[2026-07-09T16:45:15.116+0000] {processor.py:186} INFO - Started process (PID=6514) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:15.119+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:45:15.124+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:15.123+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:15.142+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:15.209+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:15.208+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:45:15.237+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:15.237+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:45:15.279+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.197 seconds
+[2026-07-09T16:45:45.397+0000] {processor.py:186} INFO - Started process (PID=6544) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:45.404+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:45:45.415+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:45.413+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:45.463+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:45:45.571+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:45.571+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:45:45.603+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:45:45.603+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:45:45.626+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.262 seconds
+[2026-07-09T16:46:15.797+0000] {processor.py:186} INFO - Started process (PID=6574) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:15.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:46:15.803+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:15.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:15.817+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:15.870+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:15.870+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:46:15.895+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:15.895+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:46:15.922+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.138 seconds
+[2026-07-09T16:46:46.292+0000] {processor.py:186} INFO - Started process (PID=6604) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:46.296+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:46:46.307+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:46.306+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:46.327+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:46:46.390+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:46.389+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:46:46.409+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:46:46.409+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:46:46.428+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.179 seconds
+[2026-07-09T16:47:17.171+0000] {processor.py:186} INFO - Started process (PID=6634) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:17.175+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:47:17.189+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:17.187+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:17.232+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:17.325+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:17.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:47:17.366+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:17.366+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:47:17.408+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.278 seconds
+[2026-07-09T16:47:47.474+0000] {processor.py:186} INFO - Started process (PID=6664) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:47.478+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:47:47.487+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:47.486+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:47.529+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:47:47.717+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:47.716+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:47:47.797+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:47:47.796+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:47:47.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.402 seconds
+[2026-07-09T16:48:18.713+0000] {processor.py:186} INFO - Started process (PID=6700) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:18.714+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:48:18.717+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:18.716+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:18.729+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:18.775+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:18.775+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:48:18.793+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:18.793+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:48:18.816+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.113 seconds
+[2026-07-09T16:48:49.695+0000] {processor.py:186} INFO - Started process (PID=6730) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:49.698+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:48:49.704+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:49.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:49.722+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:48:49.770+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:49.770+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:48:49.791+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:48:49.791+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:48:49.814+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.147 seconds
+[2026-07-09T16:49:19.932+0000] {processor.py:186} INFO - Started process (PID=6760) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:19.935+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:49:19.946+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:19.945+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:19.972+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:20.022+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:20.022+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:49:20.043+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:20.043+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:49:20.069+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.170 seconds
+[2026-07-09T16:49:50.239+0000] {processor.py:186} INFO - Started process (PID=6790) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:50.244+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:49:50.255+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:50.254+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:50.297+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:49:50.445+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:50.444+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:49:50.470+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:49:50.469+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:49:50.490+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.283 seconds
+[2026-07-09T16:50:20.710+0000] {processor.py:186} INFO - Started process (PID=6820) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:20.715+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:50:20.731+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:20.729+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:20.790+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:20.858+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:20.858+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:50:20.896+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:20.895+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:50:20.935+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.267 seconds
+[2026-07-09T16:50:51.968+0000] {processor.py:186} INFO - Started process (PID=6850) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:51.969+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:50:51.972+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:51.971+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:51.982+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:50:52.020+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:52.020+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:50:52.035+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:50:52.035+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:50:52.055+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.094 seconds
+[2026-07-09T16:51:22.141+0000] {processor.py:186} INFO - Started process (PID=6880) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:22.142+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:51:22.147+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:22.146+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:22.161+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:22.219+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:22.218+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:51:22.247+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:22.247+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:51:22.268+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.139 seconds
+[2026-07-09T16:51:52.460+0000] {processor.py:186} INFO - Started process (PID=6910) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:52.463+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:51:52.467+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:52.467+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:52.481+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:51:52.548+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:52.548+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:51:52.570+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:51:52.570+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:51:52.597+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.148 seconds
+[2026-07-09T16:52:22.830+0000] {processor.py:186} INFO - Started process (PID=6940) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:22.832+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:52:22.838+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:22.837+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:22.858+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:22.926+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:22.925+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:52:22.947+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:22.947+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:52:22.972+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.161 seconds
+[2026-07-09T16:52:53.875+0000] {processor.py:186} INFO - Started process (PID=6970) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:53.881+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:52:53.893+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:53.891+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:53.918+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:52:53.962+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:53.962+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:52:53.979+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:52:53.978+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:52:53.998+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.152 seconds
+[2026-07-09T16:53:24.586+0000] {processor.py:186} INFO - Started process (PID=7000) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:24.588+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:53:24.591+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:24.591+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:24.604+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:24.647+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:24.647+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:53:24.667+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:24.666+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:53:24.690+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.114 seconds
+[2026-07-09T16:53:55.238+0000] {processor.py:186} INFO - Started process (PID=7030) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:55.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:53:55.243+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:55.243+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:55.255+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:53:55.293+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:55.293+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:53:55.310+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:53:55.309+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:53:55.330+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.102 seconds
+[2026-07-09T16:54:25.861+0000] {processor.py:186} INFO - Started process (PID=7060) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:25.863+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:54:25.867+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:25.866+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:25.883+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:25.937+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:25.936+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:54:25.969+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:25.969+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:54:25.992+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.143 seconds
+[2026-07-09T16:54:56.214+0000] {processor.py:186} INFO - Started process (PID=7090) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:56.220+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:54:56.231+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:56.230+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:56.272+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:54:56.385+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:56.384+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:54:56.402+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:54:56.402+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:54:56.421+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.244 seconds
+[2026-07-09T16:55:26.947+0000] {processor.py:186} INFO - Started process (PID=7120) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:26.947+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:55:26.951+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:26.950+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:26.962+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:27.006+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:27.006+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:55:27.025+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:27.025+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:55:27.048+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.109 seconds
+[2026-07-09T16:55:57.346+0000] {processor.py:186} INFO - Started process (PID=7150) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:57.348+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:55:57.352+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:57.351+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:57.362+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:55:57.406+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:57.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:55:57.422+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:55:57.422+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:55:57.446+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.110 seconds
+[2026-07-09T16:56:28.415+0000] {processor.py:186} INFO - Started process (PID=7180) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:28.418+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:56:28.430+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:28.429+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:28.469+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:28.545+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:28.544+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:56:28.568+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:28.568+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:56:28.591+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.215 seconds
+[2026-07-09T16:56:59.362+0000] {processor.py:186} INFO - Started process (PID=7210) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:59.364+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:56:59.367+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:59.366+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:59.379+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:56:59.412+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:59.412+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:56:59.427+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:56:59.427+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:56:59.447+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.096 seconds
+[2026-07-09T16:57:30.223+0000] {processor.py:186} INFO - Started process (PID=7240) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:57:30.226+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:57:30.237+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:57:30.236+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:57:30.281+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:57:30.341+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:57:30.340+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:57:30.360+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:57:30.360+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:57:30.380+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.190 seconds
+[2026-07-09T16:58:01.061+0000] {processor.py:186} INFO - Started process (PID=7270) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:01.065+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:58:01.071+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:01.071+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:01.092+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:01.137+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:01.137+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:58:01.157+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:01.156+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:58:01.179+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.135 seconds
+[2026-07-09T16:58:31.799+0000] {processor.py:186} INFO - Started process (PID=7300) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:31.800+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:58:31.804+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:31.804+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:31.823+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:58:31.881+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:31.880+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:58:31.899+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:58:31.899+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:58:31.923+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.137 seconds
+[2026-07-09T16:59:02.583+0000] {processor.py:186} INFO - Started process (PID=7330) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:02.584+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:59:02.588+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:02.587+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:02.600+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:02.646+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:02.645+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:59:02.665+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:02.665+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:59:02.687+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.114 seconds
+[2026-07-09T16:59:33.582+0000] {processor.py:186} INFO - Started process (PID=7360) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:33.583+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T16:59:33.586+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:33.585+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:33.596+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T16:59:33.643+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:33.643+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T16:59:33.662+0000] {logging_mixin.py:190} INFO - [2026-07-09T16:59:33.661+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T16:59:33.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.108 seconds
+[2026-07-09T17:00:04.367+0000] {processor.py:186} INFO - Started process (PID=7390) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:04.373+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:00:04.385+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:04.383+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:04.430+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:04.579+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:04.578+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:00:04.602+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:04.602+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:00:04.625+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.296 seconds
+[2026-07-09T17:00:35.577+0000] {processor.py:186} INFO - Started process (PID=7420) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:35.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:00:35.587+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:35.586+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:35.610+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:00:35.702+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:35.701+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:00:35.776+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:00:35.775+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:00:35.831+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.288 seconds
+[2026-07-09T17:01:05.996+0000] {processor.py:186} INFO - Started process (PID=7456) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:06.001+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:01:06.017+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:06.015+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:06.072+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:06.238+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:06.237+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:01:06.306+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:06.306+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:01:06.382+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.423 seconds
+[2026-07-09T17:01:37.204+0000] {processor.py:186} INFO - Started process (PID=7486) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:37.206+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:01:37.212+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:37.211+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:37.229+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:01:37.270+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:37.270+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:01:37.286+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:01:37.286+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:01:37.305+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.132 seconds
+[2026-07-09T17:02:08.014+0000] {processor.py:186} INFO - Started process (PID=7516) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:08.016+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:02:08.024+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:08.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:08.039+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:08.085+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:08.084+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:02:08.104+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:08.104+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:02:08.122+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.124 seconds
+[2026-07-09T17:02:38.972+0000] {processor.py:186} INFO - Started process (PID=7546) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:38.976+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:02:38.986+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:38.985+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:39.047+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:02:39.209+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:39.208+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:02:39.251+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:02:39.251+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:02:39.290+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.339 seconds
+[2026-07-09T17:03:09.897+0000] {processor.py:186} INFO - Started process (PID=7594) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:09.898+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:03:09.903+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:09.902+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:09.917+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:09.962+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:09.962+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:03:09.983+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:09.982+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:03:10.013+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.134 seconds
+[2026-07-09T17:03:41.100+0000] {processor.py:186} INFO - Started process (PID=7624) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:41.103+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:03:41.109+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:41.109+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:41.125+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:03:41.178+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:41.178+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:03:41.200+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:03:41.200+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:03:41.225+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.149 seconds
+[2026-07-09T17:04:12.104+0000] {processor.py:186} INFO - Started process (PID=7654) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:12.108+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:04:12.114+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:12.113+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:12.135+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:12.230+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:12.230+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:04:12.265+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:12.265+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:04:12.307+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.221 seconds
+[2026-07-09T17:04:43.103+0000] {processor.py:186} INFO - Started process (PID=7684) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:43.109+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:04:43.122+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:43.120+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:43.170+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:04:43.301+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:43.301+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:04:43.331+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:04:43.331+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:04:43.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.301 seconds
+[2026-07-09T17:05:13.900+0000] {processor.py:186} INFO - Started process (PID=7714) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:13.901+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:05:13.904+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:13.904+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:13.915+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:13.953+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:13.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:05:13.969+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:13.969+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:05:13.992+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.099 seconds
+[2026-07-09T17:05:44.221+0000] {processor.py:186} INFO - Started process (PID=7744) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:44.226+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:05:44.238+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:44.237+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:44.279+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:05:44.420+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:44.420+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:05:44.448+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:05:44.448+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:05:44.483+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.302 seconds
+[2026-07-09T17:06:14.596+0000] {processor.py:186} INFO - Started process (PID=7774) to work on /opt/airflow/dags/04_branch.py
+[2026-07-09T17:06:14.599+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/04_branch.py for tasks to queue
+[2026-07-09T17:06:14.613+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:06:14.612+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:06:14.654+0000] {processor.py:925} INFO - DAG(s) '04_branch' retrieved from /opt/airflow/dags/04_branch.py
+[2026-07-09T17:06:14.716+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:06:14.716+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-09T17:06:14.903+0000] {logging_mixin.py:190} INFO - [2026-07-09T17:06:14.903+0000] {dag.py:4180} INFO - Setting next_dagrun for 04_branch to None, run_after=None
+[2026-07-09T17:06:14.922+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/04_branch.py took 0.360 seconds

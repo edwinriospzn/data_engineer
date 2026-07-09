@@ -158,13 +158,14 @@ with DAG(
     
     create_tables = PythonOperator(task_id="create_tables", python_callable=create_tables)
     
-    # Sensor waits for orders.csv to exist
+    # Sensor waits for orders.csv to exist - using fs_conn_id=None for local filesystem
     wait_for_orders = FileSensor(
         task_id="wait_for_orders",
         filepath=str(DATA_DIR / "orders.csv"),
-        poke_interval=10,      # Check every 10 seconds
-        timeout=120,            # Timeout after 2 minutes
-        mode="poke",            # Poke mode (or "reschedule")
+        fs_conn_id="fs_default",   # Use the connection we created
+        poke_interval=10,          # Check every 10 seconds
+        timeout=120,               # Timeout after 2 minutes
+        mode="poke",               # Poke mode (or "reschedule")
     )
     
     load_customers = PythonOperator(task_id="load_customers", python_callable=load_customers)

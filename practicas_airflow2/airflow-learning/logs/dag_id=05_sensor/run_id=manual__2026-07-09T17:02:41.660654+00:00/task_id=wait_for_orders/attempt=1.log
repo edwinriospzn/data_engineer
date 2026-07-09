@@ -1,0 +1,24 @@
+[2026-07-09T17:02:46.694+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-09T17:02:46.750+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 05_sensor.wait_for_orders manual__2026-07-09T17:02:41.660654+00:00 [queued]>
+[2026-07-09T17:02:46.771+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 05_sensor.wait_for_orders manual__2026-07-09T17:02:41.660654+00:00 [queued]>
+[2026-07-09T17:02:46.772+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-09T17:02:46.812+0000] {taskinstance.py:2889} INFO - Executing <Task(FileSensor): wait_for_orders> on 2026-07-09 17:02:41.660654+00:00
+[2026-07-09T17:02:46.837+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '05_sensor', 'wait_for_orders', 'manual__2026-07-09T17:02:41.660654+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/05_sensor.py', '--cfg-path', '/tmp/tmpikopitop']
+[2026-07-09T17:02:46.841+0000] {standard_task_runner.py:105} INFO - Job 34: Subtask wait_for_orders
+[2026-07-09T17:02:46.844+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=7554) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-09T17:02:46.846+0000] {standard_task_runner.py:72} INFO - Started process 7555 to run task
+[2026-07-09T17:02:46.946+0000] {task_command.py:467} INFO - Running <TaskInstance: 05_sensor.wait_for_orders manual__2026-07-09T17:02:41.660654+00:00 [running]> on host 5a7e11089a04
+[2026-07-09T17:02:47.169+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='05_sensor' AIRFLOW_CTX_TASK_ID='wait_for_orders' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T17:02:41.660654+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-09T17:02:41.660654+00:00'
+[2026-07-09T17:02:47.171+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-09T17:02:47.200+0000] {baseoperator.py:416} WARNING - FileSensor.execute cannot be called outside TaskInstance!
+[2026-07-09T17:02:47.228+0000] {base.py:84} INFO - Retrieving connection 'fs_default'
+[2026-07-09T17:02:47.228+0000] {filesystem.py:109} INFO - Poking for file /opt/***/data/05/orders.csv
+[2026-07-09T17:02:47.230+0000] {filesystem.py:113} INFO - Found File /opt/***/data/05/orders.csv last modified: 20260709162144
+[2026-07-09T17:02:47.232+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2026-07-09T17:02:47.233+0000] {filesystem.py:109} INFO - Poking for file /opt/***/data/05/orders.csv
+[2026-07-09T17:02:47.234+0000] {filesystem.py:113} INFO - Found File /opt/***/data/05/orders.csv last modified: 20260709162144
+[2026-07-09T17:02:47.261+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-09T17:02:47.261+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=05_sensor, task_id=wait_for_orders, run_id=manual__2026-07-09T17:02:41.660654+00:00, execution_date=20260709T170241, start_date=20260709T170246, end_date=20260709T170247
+[2026-07-09T17:02:47.311+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-09T17:02:47.377+0000] {taskinstance.py:3895} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-07-09T17:02:47.379+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

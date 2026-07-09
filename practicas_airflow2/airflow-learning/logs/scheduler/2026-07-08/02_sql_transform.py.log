@@ -510,3 +510,31 @@
 [2026-07-08T21:33:49.456+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:33:49.455+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-07-08T21:33:49.499+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:33:49.499+0000] {dag.py:4180} INFO - Setting next_dagrun for 02_sql_transform to None, run_after=None
 [2026-07-08T21:33:49.549+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_sql_transform.py took 0.251 seconds
+[2026-07-08T21:34:19.983+0000] {processor.py:186} INFO - Started process (PID=4373) to work on /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:19.986+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_sql_transform.py for tasks to queue
+[2026-07-08T21:34:19.993+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:19.992+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:20.025+0000] {processor.py:925} INFO - DAG(s) '02_sql_transform' retrieved from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:20.131+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:20.130+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T21:34:20.168+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:20.167+0000] {dag.py:4180} INFO - Setting next_dagrun for 02_sql_transform to None, run_after=None
+[2026-07-08T21:34:20.211+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_sql_transform.py took 0.248 seconds
+[2026-07-08T21:34:50.676+0000] {processor.py:186} INFO - Started process (PID=4393) to work on /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:50.679+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_sql_transform.py for tasks to queue
+[2026-07-08T21:34:50.687+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:50.686+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:50.709+0000] {processor.py:925} INFO - DAG(s) '02_sql_transform' retrieved from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:34:50.770+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:50.770+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T21:34:50.796+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:34:50.796+0000] {dag.py:4180} INFO - Setting next_dagrun for 02_sql_transform to None, run_after=None
+[2026-07-08T21:34:50.835+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_sql_transform.py took 0.174 seconds
+[2026-07-08T21:35:21.444+0000] {processor.py:186} INFO - Started process (PID=4413) to work on /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:21.446+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_sql_transform.py for tasks to queue
+[2026-07-08T21:35:21.448+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:21.448+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:21.459+0000] {processor.py:925} INFO - DAG(s) '02_sql_transform' retrieved from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:21.494+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:21.494+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T21:35:21.511+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:21.511+0000] {dag.py:4180} INFO - Setting next_dagrun for 02_sql_transform to None, run_after=None
+[2026-07-08T21:35:21.531+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_sql_transform.py took 0.094 seconds
+[2026-07-08T21:35:52.078+0000] {processor.py:186} INFO - Started process (PID=4433) to work on /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:52.078+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/02_sql_transform.py for tasks to queue
+[2026-07-08T21:35:52.081+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:52.081+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:52.093+0000] {processor.py:925} INFO - DAG(s) '02_sql_transform' retrieved from /opt/airflow/dags/02_sql_transform.py
+[2026-07-08T21:35:52.129+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:52.129+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-08T21:35:52.147+0000] {logging_mixin.py:190} INFO - [2026-07-08T21:35:52.147+0000] {dag.py:4180} INFO - Setting next_dagrun for 02_sql_transform to None, run_after=None
+[2026-07-08T21:35:52.166+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/02_sql_transform.py took 0.096 seconds

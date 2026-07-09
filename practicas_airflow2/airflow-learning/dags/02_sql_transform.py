@@ -39,7 +39,6 @@ def load_data(table_name, rows, columns):
 def create_tables():
     conn = psycopg2.connect(host=DB_HOST, port=DB_PORT, dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD)
     with conn.cursor() as cur:
-        cur.execute("DROP TABLE IF EXISTS t02_product_performance")
         cur.execute("DROP TABLE IF EXISTS t02_orders")
         cur.execute("DROP TABLE IF EXISTS t02_products")
         cur.execute("DROP TABLE IF EXISTS t02_customers")
@@ -94,8 +93,23 @@ def load_orders():
 def calculate_performance():
     conn = psycopg2.connect(host=DB_HOST, port=DB_PORT, dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD)
     with conn.cursor() as cur:
+        # Create table if not exists (first time only)
         cur.execute("""
-            CREATE TABLE t02_product_performance AS
+            CREATE TABLE IF NOT EXISTS t02_product_performance (
+                product_id INTEGER,
+                name TEXT,
+                category TEXT,
+                orders INTEGER,
+                units_sold INTEGER,
+                revenue INTEGER,
+                rank INTEGER,
+                executed_at TIMESTAMP
+            )
+        """)
+        
+        # Insert new performance data
+        cur.execute("""
+            INSERT INTO t02_product_performance
             SELECT 
                 p.product_id,
                 p.name,

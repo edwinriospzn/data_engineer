@@ -158,7 +158,7 @@ with DAG(
     
     create_tables = PythonOperator(task_id="create_tables", python_callable=create_tables)
     
-    # Sensor waits for orders.csv to exist - using fs_conn_id=None for local filesystem
+    # Sensor waits for orders.csv to exist 
     wait_for_orders = FileSensor(
         task_id="wait_for_orders",
         filepath=str(DATA_DIR / "orders.csv"),

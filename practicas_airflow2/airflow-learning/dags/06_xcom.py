@@ -51,15 +51,15 @@ def process_data(data):
 @task
 def generate_report(stats):
     report = f"""
-╔══════════════════════════════════════════╗
-║           LIBRARY REPORT                 ║
-╠══════════════════════════════════════════╣
-║ Total loans:    {stats['total_loans']:>4}                    ║
-║ Total fees:     ${stats['total_fees']:>7.2f}                ║
-║ Avg fee:        ${stats['avg_fee']:>7.2f}                ║
-║ Top member:     {stats['top_member']:<15}        ║
-║ Top book:       {stats['top_book']:<15}        ║
-╚══════════════════════════════════════════╝
+═══════════════════════════════════════════
+            LIBRARY REPORT                 
+═══════════════════════════════════════════
+╠ *Total loans:    {stats['total_loans']:>4}
+╠ *Total fees:     ${stats['total_fees']:>7.2f}
+╠ *Avg fee:        ${stats['avg_fee']:>7.2f}
+╠ *Top member:     {stats['top_member']:<15}
+╠ *Top book:       {stats['top_book']:<15}
+═══════════════════════════════════════════
 """
     print(report)
     return report

@@ -1,0 +1,18 @@
+[2026-07-09T23:34:00.415+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-09T23:34:00.471+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 06_xcom.process_data manual__2026-07-09T23:33:56.717309+00:00 [queued]>
+[2026-07-09T23:34:00.491+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 06_xcom.process_data manual__2026-07-09T23:33:56.717309+00:00 [queued]>
+[2026-07-09T23:34:00.492+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-09T23:34:00.521+0000] {taskinstance.py:2889} INFO - Executing <Task(_PythonDecoratedOperator): process_data> on 2026-07-09 23:33:56.717309+00:00
+[2026-07-09T23:34:00.534+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '06_xcom', 'process_data', 'manual__2026-07-09T23:33:56.717309+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/06_xcom.py', '--cfg-path', '/tmp/tmplicxl7pp']
+[2026-07-09T23:34:00.537+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask process_data
+[2026-07-09T23:34:00.538+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=7186) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-09T23:34:00.539+0000] {standard_task_runner.py:72} INFO - Started process 7194 to run task
+[2026-07-09T23:34:00.637+0000] {task_command.py:467} INFO - Running <TaskInstance: 06_xcom.process_data manual__2026-07-09T23:33:56.717309+00:00 [running]> on host 8cff16b43c6d
+[2026-07-09T23:34:00.826+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='06_xcom' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2026-07-09T23:33:56.717309+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-09T23:33:56.717309+00:00'
+[2026-07-09T23:34:00.830+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-09T23:34:00.834+0000] {python.py:240} INFO - Done. Returned value was: {'total_loans': 8, 'total_fees': 9.0, 'avg_fee': 1.125, 'top_member': 'Ana', 'top_book': 'The Great Gatsby'}
+[2026-07-09T23:34:00.890+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-09T23:34:00.891+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=06_xcom, task_id=process_data, run_id=manual__2026-07-09T23:33:56.717309+00:00, execution_date=20260709T233356, start_date=20260709T233400, end_date=20260709T233400
+[2026-07-09T23:34:00.957+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-09T23:34:01.030+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-09T23:34:01.035+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -20832,3 +20832,458 @@ File Path                                PID  Runtime      # DAGs    # Errors  L
 /opt/airflow/dags/04_branch.py                                  1           0  0.13s           2026-07-10T00:38:03                      10
 /opt/airflow/dags/01_load_csv.py                                1           0  0.12s           2026-07-10T00:38:04                      10
 ================================================================================
+[2026-07-10T00:38:36.465+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/02_sql_transform.py                           1           0  0.33s           2026-07-10T00:38:35                      10
+/opt/airflow/dags/03_parallel.py       11636  0.02s             1           0  0.30s           2026-07-10T00:38:06                      10
+/opt/airflow/dags/06_xcom.py                                    1           0  0.29s           2026-07-10T00:38:34                      10
+/opt/airflow/dags/01_load_csv.py                                1           0  0.28s           2026-07-10T00:38:35                      10
+/opt/airflow/dags/00_hello_world.py    11639  0.01s             1           0  0.27s           2026-07-10T00:38:06                      10
+/opt/airflow/dags/05_sensor.py                                  1           0  0.25s           2026-07-10T00:38:34                      10
+/opt/airflow/dags/04_branch.py                                  1           0  0.22s           2026-07-10T00:38:35                      10
+================================================================================
+[2026-07-10T00:39:00.801+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-07-10T00:39:00.803+0000] {manager.py:824} INFO - There are 8 files in /opt/airflow/dags
+[2026-07-10T00:39:06.611+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.74s           2026-07-10T00:39:01                      43
+/opt/airflow/dags/02_sql_transform.py    11666  0.30s             1           0  0.33s           2026-07-10T00:38:35                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.26s           2026-07-10T00:39:06                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.25s           2026-07-10T00:38:36                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.25s           2026-07-10T00:38:36                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.21s           2026-07-10T00:39:05                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.18s           2026-07-10T00:39:05                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.14s           2026-07-10T00:39:05                      10
+================================================================================
+[2026-07-10T00:39:37.379+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.63s           2026-07-10T00:39:36                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.63s           2026-07-10T00:39:36                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.41s           2026-07-10T00:39:35                      10
+/opt/airflow/dags/02_sql_transform.py    11724  0.02s             1           0  0.31s           2026-07-10T00:39:06                      10
+/opt/airflow/dags/01_load_csv.py         11727  0.01s             1           0  0.26s           2026-07-10T00:39:06                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.22s           2026-07-10T00:39:07                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.21s           2026-07-10T00:39:32                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.19s           2026-07-10T00:39:07                      10
+================================================================================
+[2026-07-10T00:40:07.780+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py                                      1           0  0.30s           2026-07-10T00:40:06                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.28s           2026-07-10T00:39:37                      10
+/opt/airflow/dags/01_load_csv.py         11767  0.04s             1           0  0.24s           2026-07-10T00:39:37                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.23s           2026-07-10T00:39:38                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.22s           2026-07-10T00:39:38                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.19s           2026-07-10T00:40:06                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.13s           2026-07-10T00:40:06                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.13s           2026-07-10T00:40:03                      10
+================================================================================
+[2026-07-10T00:40:37.958+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.30s           2026-07-10T00:40:33                      10
+/opt/airflow/dags/01_load_csv.py         11807  0.01s             1           0  0.29s           2026-07-10T00:40:07                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.23s           2026-07-10T00:40:09                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.20s           2026-07-10T00:40:09                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.19s           2026-07-10T00:40:36                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.18s           2026-07-10T00:40:36                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.17s           2026-07-10T00:40:07                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.14s           2026-07-10T00:40:36                      10
+================================================================================
+[2026-07-10T00:41:08.293+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.43s           2026-07-10T00:41:05                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.32s           2026-07-10T00:41:07                      10
+/opt/airflow/dags/01_load_csv.py         11847  0.02s             1           0  0.20s           2026-07-10T00:40:38                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.18s           2026-07-10T00:40:39                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.17s           2026-07-10T00:40:39                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.15s           2026-07-10T00:40:38                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.13s           2026-07-10T00:41:07                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.13s           2026-07-10T00:41:07                      10
+================================================================================
+[2026-07-10T00:41:38.696+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.42s           2026-07-10T00:41:35                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.29s           2026-07-10T00:41:09                      10
+/opt/airflow/dags/01_load_csv.py         11890  0.01s             1           0  0.28s           2026-07-10T00:41:08                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.24s           2026-07-10T00:41:37                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.23s           2026-07-10T00:41:09                      10
+/opt/airflow/dags/02_sql_transform.py    11887  0.04s             1           0  0.22s           2026-07-10T00:41:08                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.13s           2026-07-10T00:41:37                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.13s           2026-07-10T00:41:37                      10
+================================================================================
+[2026-07-10T00:42:09.133+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py                                      1           0  0.33s           2026-07-10T00:42:08                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.31s           2026-07-10T00:42:06                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.27s           2026-07-10T00:41:41                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.23s           2026-07-10T00:42:07                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.22s           2026-07-10T00:41:41                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.18s           2026-07-10T00:42:08                      10
+/opt/airflow/dags/02_sql_transform.py    11927  0.08s             1           0  0.16s           2026-07-10T00:41:38                      10
+/opt/airflow/dags/01_load_csv.py         11930  0.03s             1           0  0.13s           2026-07-10T00:41:38                      10
+================================================================================
+[2026-07-10T00:42:39.553+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.31s           2026-07-10T00:42:37                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.28s           2026-07-10T00:42:11                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.25s           2026-07-10T00:42:11                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.25s           2026-07-10T00:42:38                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.21s           2026-07-10T00:42:38                      10
+/opt/airflow/dags/02_sql_transform.py    11967  0.08s             1           0  0.21s           2026-07-10T00:42:09                      10
+/opt/airflow/dags/01_load_csv.py         11970  0.03s             1           0  0.17s           2026-07-10T00:42:09                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.16s           2026-07-10T00:42:38                      10
+================================================================================
+[2026-07-10T00:43:09.799+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py                                      1           0  0.27s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.26s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/02_sql_transform.py    12007  0.03s             1           0  0.25s           2026-07-10T00:42:39                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.22s           2026-07-10T00:42:41                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.21s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/01_load_csv.py         12010  0.01s             1           0  0.21s           2026-07-10T00:42:39                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.19s           2026-07-10T00:42:41                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.18s           2026-07-10T00:43:07                      10
+================================================================================
+[2026-07-10T00:43:40.829+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py           12042  0.09s             1           0  0.21s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.17s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/02_sql_transform.py    12045  0.04s             1           0  0.17s           2026-07-10T00:43:09                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.14s           2026-07-10T00:43:12                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.13s           2026-07-10T00:43:12                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.12s           2026-07-10T00:43:39                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.12s           2026-07-10T00:43:37                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.12s           2026-07-10T00:43:39                      10
+================================================================================
+[2026-07-10T00:44:01.506+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-07-10T00:44:01.521+0000] {manager.py:824} INFO - There are 8 files in /opt/airflow/dags
+[2026-07-10T00:44:10.868+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.34s           2026-07-10T00:43:41                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.26s           2026-07-10T00:44:09                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.24s           2026-07-10T00:43:41                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.21s           2026-07-10T00:44:09                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.17s           2026-07-10T00:44:07                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.14s           2026-07-10T00:43:42                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.13s           2026-07-10T00:43:42                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.12s           2026-07-10T00:43:41                      10
+================================================================================
+[2026-07-10T00:44:40.898+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.23s           2026-07-10T00:44:12                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.22s           2026-07-10T00:44:40                      10
+/opt/airflow/dags/05_sensor.py           12115  0.18s             1           0  0.21s           2026-07-10T00:44:09                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.20s           2026-07-10T00:44:13                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.18s           2026-07-10T00:44:12                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.16s           2026-07-10T00:44:13                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.13s           2026-07-10T00:44:38                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:44:12                      10
+================================================================================
+[2026-07-10T00:45:11.113+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.30s           2026-07-10T00:45:09                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.28s           2026-07-10T00:44:43                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.25s           2026-07-10T00:44:43                      10
+/opt/airflow/dags/05_sensor.py           12155  0.02s             1           0  0.25s           2026-07-10T00:44:40                      10
+/opt/airflow/dags/06_xcom.py             12152  0.05s             1           0  0.22s           2026-07-10T00:44:40                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.20s           2026-07-10T00:44:43                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.20s           2026-07-10T00:44:43                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.17s           2026-07-10T00:44:43                      10
+================================================================================
+[2026-07-10T00:45:41.498+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py             12192  0.05s             1           0  0.33s           2026-07-10T00:45:11                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.30s           2026-07-10T00:45:13                      10
+/opt/airflow/dags/05_sensor.py           12195  0.02s             1           0  0.26s           2026-07-10T00:45:11                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.25s           2026-07-10T00:45:13                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.17s           2026-07-10T00:45:39                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.14s           2026-07-10T00:45:13                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.13s           2026-07-10T00:45:13                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:45:13                      10
+================================================================================
+[2026-07-10T00:46:11.942+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.26s           2026-07-10T00:45:43                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.24s           2026-07-10T00:46:09                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.23s           2026-07-10T00:45:43                      10
+/opt/airflow/dags/06_xcom.py             12232  0.07s             1           0  0.20s           2026-07-10T00:45:41                      10
+/opt/airflow/dags/05_sensor.py           12235  0.01s             1           0  0.19s           2026-07-10T00:45:41                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.19s           2026-07-10T00:45:44                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.19s           2026-07-10T00:45:44                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.18s           2026-07-10T00:45:44                      10
+================================================================================
+[2026-07-10T00:46:42.340+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.35s           2026-07-10T00:46:40                      10
+/opt/airflow/dags/06_xcom.py             12272  0.08s             1           0  0.26s           2026-07-10T00:46:12                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.26s           2026-07-10T00:46:14                      10
+/opt/airflow/dags/05_sensor.py           12275  0.01s             1           0  0.22s           2026-07-10T00:46:12                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.21s           2026-07-10T00:46:14                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.21s           2026-07-10T00:46:14                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.19s           2026-07-10T00:46:14                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.15s           2026-07-10T00:46:14                      10
+================================================================================
+[2026-07-10T00:47:12.713+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.30s           2026-07-10T00:46:44                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.26s           2026-07-10T00:46:44                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.20s           2026-07-10T00:47:10                      10
+/opt/airflow/dags/06_xcom.py             12312  0.07s             1           0  0.20s           2026-07-10T00:46:42                      10
+/opt/airflow/dags/05_sensor.py           12315  0.02s             1           0  0.14s           2026-07-10T00:46:42                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.13s           2026-07-10T00:46:45                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.13s           2026-07-10T00:46:45                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.12s           2026-07-10T00:46:44                      10
+================================================================================
+[2026-07-10T00:47:43.129+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py             12352  0.08s             1           0  0.28s           2026-07-10T00:47:12                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.24s           2026-07-10T00:47:15                      10
+/opt/airflow/dags/05_sensor.py           12355  0.05s             1           0  0.23s           2026-07-10T00:47:12                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.20s           2026-07-10T00:47:15                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.20s           2026-07-10T00:47:41                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.19s           2026-07-10T00:47:15                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.18s           2026-07-10T00:47:15                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.15s           2026-07-10T00:47:15                      10
+================================================================================
+[2026-07-10T00:48:13.435+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.29s           2026-07-10T00:48:12                      10
+/opt/airflow/dags/05_sensor.py           12395  0.03s             1           0  0.20s           2026-07-10T00:47:43                      10
+/opt/airflow/dags/06_xcom.py             12392  0.12s             1           0  0.19s           2026-07-10T00:47:43                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.17s           2026-07-10T00:47:45                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.16s           2026-07-10T00:47:45                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.15s           2026-07-10T00:47:45                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.15s           2026-07-10T00:47:45                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.13s           2026-07-10T00:47:45                      10
+================================================================================
+[2026-07-10T00:48:43.624+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/06_xcom.py                                      1           0  0.37s           2026-07-10T00:48:13                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.37s           2026-07-10T00:48:42                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.28s           2026-07-10T00:48:13                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.23s           2026-07-10T00:48:15                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.20s           2026-07-10T00:48:15                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.17s           2026-07-10T00:48:16                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.17s           2026-07-10T00:48:16                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:48:16                      10
+================================================================================
+[2026-07-10T00:49:01.781+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-07-10T00:49:01.803+0000] {manager.py:824} INFO - There are 8 files in /opt/airflow/dags
+[2026-07-10T00:49:14.153+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.27s           2026-07-10T00:48:46                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.26s           2026-07-10T00:48:46                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.20s           2026-07-10T00:49:13                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.19s           2026-07-10T00:48:44                      10
+/opt/airflow/dags/06_xcom.py             12472  0.03s             1           0  0.18s           2026-07-10T00:48:44                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:48:46                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.13s           2026-07-10T00:48:46                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.13s           2026-07-10T00:48:46                      10
+================================================================================
+[2026-07-10T00:49:44.341+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.29s           2026-07-10T00:49:43                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.21s           2026-07-10T00:49:14                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.19s           2026-07-10T00:49:14                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.18s           2026-07-10T00:49:16                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.15s           2026-07-10T00:49:16                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.15s           2026-07-10T00:49:16                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.15s           2026-07-10T00:49:16                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:49:16                      10
+================================================================================
+[2026-07-10T00:50:14.879+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.32s           2026-07-10T00:50:14                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.26s           2026-07-10T00:49:44                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.26s           2026-07-10T00:49:47                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.23s           2026-07-10T00:49:47                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.22s           2026-07-10T00:49:44                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.12s           2026-07-10T00:49:47                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.11s           2026-07-10T00:49:47                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.11s           2026-07-10T00:49:47                      10
+================================================================================
+[2026-07-10T00:50:45.487+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.31s           2026-07-10T00:50:17                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.26s           2026-07-10T00:50:17                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.24s           2026-07-10T00:50:44                      10
+/opt/airflow/dags/06_xcom.py             12592  0.08s             1           0  0.15s           2026-07-10T00:50:15                      10
+/opt/airflow/dags/05_sensor.py           12595  0.02s             1           0  0.14s           2026-07-10T00:50:15                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.12s           2026-07-10T00:50:17                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.12s           2026-07-10T00:50:17                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.11s           2026-07-10T00:50:17                      10
+================================================================================
+[2026-07-10T00:51:15.584+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.26s           2026-07-10T00:51:14                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.25s           2026-07-10T00:50:47                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.21s           2026-07-10T00:50:45                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.19s           2026-07-10T00:50:47                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.16s           2026-07-10T00:50:45                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.14s           2026-07-10T00:50:48                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.13s           2026-07-10T00:50:48                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.12s           2026-07-10T00:50:48                      10
+================================================================================
+[2026-07-10T00:51:46.182+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/04_branch.py                                    1           0  0.28s           2026-07-10T00:51:18                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.25s           2026-07-10T00:51:18                      10
+/opt/airflow/dags/06_xcom.py             12672  0.05s             1           0  0.25s           2026-07-10T00:51:16                      10
+/opt/airflow/dags/07_dynamic_mapping.py                           1           0  0.23s           2026-07-10T00:51:45                      10
+/opt/airflow/dags/05_sensor.py           12675  0.01s             1           0  0.22s           2026-07-10T00:51:16                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.16s           2026-07-10T00:51:18                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.13s           2026-07-10T00:51:18                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.11s           2026-07-10T00:51:18                      10
+================================================================================
+[2026-07-10T00:52:16.198+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py  12707  0.14s             1           0  0.23s           2026-07-10T00:51:45                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.21s           2026-07-10T00:51:49                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.17s           2026-07-10T00:51:49                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.16s           2026-07-10T00:51:49                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.16s           2026-07-10T00:51:46                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.16s           2026-07-10T00:51:49                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.16s           2026-07-10T00:51:49                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.13s           2026-07-10T00:51:46                      10
+================================================================================
+[2026-07-10T00:52:46.490+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/07_dynamic_mapping.py  12747  0.01s             1           0  0.24s           2026-07-10T00:52:16                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.21s           2026-07-10T00:52:19                      10
+/opt/airflow/dags/06_xcom.py                                      1           0  0.17s           2026-07-10T00:52:16                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.17s           2026-07-10T00:52:16                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.16s           2026-07-10T00:52:19                      10
+/opt/airflow/dags/03_parallel.py                                  1           0  0.15s           2026-07-10T00:52:20                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.14s           2026-07-10T00:52:20                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.11s           2026-07-10T00:52:19                      10
+================================================================================
+[2026-07-10T00:53:16.809+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+---------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/03_parallel.py                                  1           0  0.28s           2026-07-10T00:52:50                      10
+/opt/airflow/dags/01_load_csv.py                                  1           0  0.23s           2026-07-10T00:52:50                      10
+/opt/airflow/dags/02_sql_transform.py                             1           0  0.20s           2026-07-10T00:52:50                      10
+/opt/airflow/dags/04_branch.py                                    1           0  0.19s           2026-07-10T00:52:50                      10
+/opt/airflow/dags/00_hello_world.py                               1           0  0.18s           2026-07-10T00:52:50                      10
+/opt/airflow/dags/07_dynamic_mapping.py  12787  0.06s             1           0  0.17s           2026-07-10T00:52:46                      10
+/opt/airflow/dags/06_xcom.py             12790  0.02s             1           0  0.16s           2026-07-10T00:52:46                      10
+/opt/airflow/dags/05_sensor.py                                    1           0  0.15s           2026-07-10T00:52:46                      10
+================================================================================

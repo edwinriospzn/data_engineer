@@ -1,0 +1,6 @@
+customer_id,name,city,membership_type,join_date
+1,Ana,Barcelona,Premium,2024-01-15
+2,Beto,Madrid,Standard,2024-02-20
+3,Carlos,Valencia,Premium,2024-03-10
+4,Diana,Sevilla,Student,2024-04-05
+5,Elena,Bilbao,Standard,2024-05-12

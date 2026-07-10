@@ -1,0 +1,33 @@
+========================================
+Spark Debug Logs - Fri 10 Jul 2026 12:42:41 PM -05
+========================================
+
+📦 1. CONTAINER STATUS:
+NAME                   IMAGE              COMMAND                  SERVICE        CREATED         STATUS                   PORTS
+airflow-etl-postgres   postgres:16        "docker-entrypoint.s…"   etl-postgres   2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+airflow-pgadmin        dpage/pgadmin4:8   "/entrypoint.sh"         pgadmin        2 minutes ago   Up 2 minutes             443/tcp, 0.0.0.0:5050->80/tcp, [::]:5050->80/tcp
+airflow-postgres       postgres:16        "docker-entrypoint.s…"   postgres       2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+airflow-python-dev     python:3.11-slim   "bash -lc 'pip insta…"   python-dev     2 minutes ago   Up 2 minutes             
+
+📦 2. CHECKING SPARK IN WEBSERVER:
+----------------------------------------
+→ Checking if /opt/spark exists:
+service "airflow-webserver" is not running
+❌ /opt/spark NOT FOUND!
+
+→ Checking spark-submit location:
+service "airflow-webserver" is not running
+❌ spark-submit NOT FOUND in PATH!
+
+→ Checking Spark version:
+service "airflow-webserver" is not running
+❌ spark-submit command failed!
+
+→ Checking Java version:
+service "airflow-webserver" is not running
+❌ Java not found!
+
+🔧 3. ENVIRONMENT VARIABLES:
+----------------------------------------
+→ SPARK_HOME:
+service "airflow-webserver" is not running

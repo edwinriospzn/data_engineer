@@ -1,0 +1,20 @@
+[2026-07-10T19:48:13.503+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T19:48:13.537+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 03_parallel.process_orders manual__2026-07-10T19:48:10.874657+00:00 [queued]>
+[2026-07-10T19:48:13.550+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 03_parallel.process_orders manual__2026-07-10T19:48:10.874657+00:00 [queued]>
+[2026-07-10T19:48:13.551+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-10T19:48:13.580+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_orders> on 2026-07-10 19:48:10.874657+00:00
+[2026-07-10T19:48:13.601+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1255) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-10T19:48:13.603+0000] {standard_task_runner.py:72} INFO - Started process 1260 to run task
+[2026-07-10T19:48:13.602+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '03_parallel', 'process_orders', 'manual__2026-07-10T19:48:10.874657+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/03_parallel.py', '--cfg-path', '/tmp/tmpl2d0_tll']
+[2026-07-10T19:48:13.605+0000] {standard_task_runner.py:105} INFO - Job 51: Subtask process_orders
+[2026-07-10T19:48:13.712+0000] {task_command.py:467} INFO - Running <TaskInstance: 03_parallel.process_orders manual__2026-07-10T19:48:10.874657+00:00 [running]> on host 35bdc1b28d94
+[2026-07-10T19:48:13.887+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='03_parallel' AIRFLOW_CTX_TASK_ID='process_orders' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T19:48:10.874657+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T19:48:10.874657+00:00'
+[2026-07-10T19:48:13.894+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T19:48:13.917+0000] {logging_mixin.py:190} INFO - 📊 orders.csv: 79 rows
+[2026-07-10T19:48:13.918+0000] {logging_mixin.py:190} INFO -    Sample: {'order_id': '1', 'customer_id': '2', 'amount': '198', 'status': 'Cancelled'}
+[2026-07-10T19:48:13.919+0000] {logging_mixin.py:190} INFO -    Total amount: 24320
+[2026-07-10T19:48:13.919+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-10T19:48:13.944+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T19:48:13.945+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=03_parallel, task_id=process_orders, run_id=manual__2026-07-10T19:48:10.874657+00:00, execution_date=20260710T194810, start_date=20260710T194813, end_date=20260710T194813
+[2026-07-10T19:48:13.985+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T19:48:14.014+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

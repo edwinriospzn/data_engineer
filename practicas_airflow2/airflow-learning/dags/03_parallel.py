@@ -6,7 +6,7 @@ from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "data/03"
 
 
 def process_file(filename):

@@ -9,7 +9,7 @@ export DOCKER_HOST="unix:///var/run/docker.sock"
 
 echo "🔧 Setting up Airflow connections..."
 
-# Add fs_default connection
+# Add fs_default connection for 05
 docker compose exec -T airflow-webserver airflow connections add 'fs_default' \
     --conn-type 'fs' \
     --conn-extra '{"path": "/opt/airflow"}' 2>/dev/null || echo "✅ fs_default already exists"

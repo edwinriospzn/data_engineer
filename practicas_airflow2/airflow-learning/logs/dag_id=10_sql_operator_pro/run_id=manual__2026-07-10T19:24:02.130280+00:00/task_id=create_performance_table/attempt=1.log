@@ -1,0 +1,69 @@
+[2026-07-10T19:24:10.664+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T19:24:10.741+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 10_sql_operator_pro.create_performance_table manual__2026-07-10T19:24:02.130280+00:00 [queued]>
+[2026-07-10T19:24:10.771+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 10_sql_operator_pro.create_performance_table manual__2026-07-10T19:24:02.130280+00:00 [queued]>
+[2026-07-10T19:24:10.774+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-10T19:24:10.836+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): create_performance_table> on 2026-07-10 19:24:02.130280+00:00
+[2026-07-10T19:24:10.887+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=327) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-10T19:24:10.879+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '10_sql_operator_pro', 'create_performance_table', 'manual__2026-07-10T19:24:02.130280+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/10_sql_operator_pro.py', '--cfg-path', '/tmp/tmpj_0i32m8']
+[2026-07-10T19:24:10.892+0000] {standard_task_runner.py:105} INFO - Job 6: Subtask create_performance_table
+[2026-07-10T19:24:10.899+0000] {standard_task_runner.py:72} INFO - Started process 332 to run task
+[2026-07-10T19:24:11.893+0000] {task_command.py:467} INFO - Running <TaskInstance: 10_sql_operator_pro.create_performance_table manual__2026-07-10T19:24:02.130280+00:00 [running]> on host 9e68c458d5bd
+[2026-07-10T19:24:12.862+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='10_sql_operator_pro' AIRFLOW_CTX_TASK_ID='create_performance_table' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T19:24:02.130280+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T19:24:02.130280+00:00'
+[2026-07-10T19:24:12.888+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T19:24:12.997+0000] {sql.py:278} INFO - Executing: 
+            DROP TABLE IF EXISTS t10_student_performance;
+            
+            CREATE TABLE t10_student_performance AS
+            SELECT 
+                s.student_id,
+                s.name,
+                s.major,
+                COUNT(e.enrollment_id) as total_courses,
+                ROUND(AVG(CASE 
+                    WHEN e.grade = 'A' THEN 4.0
+                    WHEN e.grade = 'A-' THEN 3.7
+                    WHEN e.grade = 'B+' THEN 3.3
+                    WHEN e.grade = 'B' THEN 3.0
+                    WHEN e.grade = 'B-' THEN 2.7
+                    WHEN e.grade = 'C+' THEN 2.3
+                    WHEN e.grade = 'C' THEN 2.0
+                    ELSE 0
+                END)::numeric, 2) as gpa
+            FROM t10_students s
+            JOIN t10_enrollments e ON s.student_id = e.student_id
+            GROUP BY s.student_id, s.name, s.major
+            ORDER BY gpa DESC;
+        
+[2026-07-10T19:24:13.008+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T19:24:13.018+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T19:24:13.073+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T19:24:13.102+0000] {sql.py:544} INFO - Running statement: 
+            DROP TABLE IF EXISTS t10_student_performance;
+            
+            CREATE TABLE t10_student_performance AS
+            SELECT 
+                s.student_id,
+                s.name,
+                s.major,
+                COUNT(e.enrollment_id) as total_courses,
+                ROUND(AVG(CASE 
+                    WHEN e.grade = 'A' THEN 4.0
+                    WHEN e.grade = 'A-' THEN 3.7
+                    WHEN e.grade = 'B+' THEN 3.3
+                    WHEN e.grade = 'B' THEN 3.0
+                    WHEN e.grade = 'B-' THEN 2.7
+                    WHEN e.grade = 'C+' THEN 2.3
+                    WHEN e.grade = 'C' THEN 2.0
+                    ELSE 0
+                END)::numeric, 2) as gpa
+            FROM t10_students s
+            JOIN t10_enrollments e ON s.student_id = e.student_id
+            GROUP BY s.student_id, s.name, s.major
+            ORDER BY gpa DESC;
+        , parameters: None
+[2026-07-10T19:24:13.156+0000] {sql.py:553} INFO - Rows affected: 10
+[2026-07-10T19:24:13.209+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T19:24:13.211+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=10_sql_operator_pro, task_id=create_performance_table, run_id=manual__2026-07-10T19:24:02.130280+00:00, execution_date=20260710T192402, start_date=20260710T192410, end_date=20260710T192413
+[2026-07-10T19:24:13.337+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T19:24:13.440+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T19:24:13.448+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

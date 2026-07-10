@@ -1,0 +1,33 @@
+[2026-07-10T19:44:54.464+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T19:44:54.660+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 10_sql_operator_pro.students_by_major manual__2026-07-10T19:44:48.859845+00:00 [queued]>
+[2026-07-10T19:44:54.694+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 10_sql_operator_pro.students_by_major manual__2026-07-10T19:44:48.859845+00:00 [queued]>
+[2026-07-10T19:44:54.694+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-10T19:44:54.743+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): students_by_major> on 2026-07-10 19:44:48.859845+00:00
+[2026-07-10T19:44:54.781+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=858) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-10T19:44:54.779+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '10_sql_operator_pro', 'students_by_major', 'manual__2026-07-10T19:44:48.859845+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/10_sql_operator_pro.py', '--cfg-path', '/tmp/tmp27ta9hqs']
+[2026-07-10T19:44:54.787+0000] {standard_task_runner.py:72} INFO - Started process 869 to run task
+[2026-07-10T19:44:54.787+0000] {standard_task_runner.py:105} INFO - Job 35: Subtask students_by_major
+[2026-07-10T19:44:55.138+0000] {task_command.py:467} INFO - Running <TaskInstance: 10_sql_operator_pro.students_by_major manual__2026-07-10T19:44:48.859845+00:00 [running]> on host 35bdc1b28d94
+[2026-07-10T19:44:55.728+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='10_sql_operator_pro' AIRFLOW_CTX_TASK_ID='students_by_major' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T19:44:48.859845+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T19:44:48.859845+00:00'
+[2026-07-10T19:44:55.731+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T19:44:55.865+0000] {sql.py:278} INFO - Executing: 
+            SELECT major, COUNT(*) as student_count 
+            FROM t10_students 
+            GROUP BY major 
+            ORDER BY student_count DESC;
+        
+[2026-07-10T19:44:55.876+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T19:44:55.884+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T19:44:55.916+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T19:44:55.964+0000] {sql.py:544} INFO - Running statement: 
+            SELECT major, COUNT(*) as student_count 
+            FROM t10_students 
+            GROUP BY major 
+            ORDER BY student_count DESC;
+        , parameters: None
+[2026-07-10T19:44:55.967+0000] {sql.py:553} INFO - Rows affected: 5
+[2026-07-10T19:44:56.210+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T19:44:56.213+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=10_sql_operator_pro, task_id=students_by_major, run_id=manual__2026-07-10T19:44:48.859845+00:00, execution_date=20260710T194448, start_date=20260710T194454, end_date=20260710T194456
+[2026-07-10T19:44:56.282+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T19:44:56.394+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T19:44:56.407+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

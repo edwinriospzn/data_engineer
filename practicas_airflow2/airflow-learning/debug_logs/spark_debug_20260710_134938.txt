@@ -1,0 +1,292 @@
+========================================
+Debug Logs - Fri 10 Jul 2026 01:49:38 PM -05
+========================================
+
+📦 1. CONTAINER STATUS:
+NAME                   IMAGE              COMMAND                  SERVICE        CREATED          STATUS                    PORTS
+airflow-etl-postgres   postgres:16        "docker-entrypoint.s…"   etl-postgres   26 minutes ago   Up 26 minutes (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+airflow-pgadmin        dpage/pgadmin4:8   "/entrypoint.sh"         pgadmin        26 minutes ago   Up 26 minutes             443/tcp, 0.0.0.0:5050->80/tcp, [::]:5050->80/tcp
+airflow-postgres       postgres:16        "docker-entrypoint.s…"   postgres       26 minutes ago   Up 26 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+airflow-python-dev     python:3.11-slim   "bash -lc 'pip insta…"   python-dev     26 minutes ago   Up 26 minutes             
+
+🔍 2. WEBSERVER CONTAINER DETAILS:
+----------------------------------------
+→ Container state:
+
+template parsing error: template: :1:28: executing "" at <.State.Health.Status>: map has no entry for key "Health"
+❌ Container not found!
+
+→ Container exit code (if exited):
+1
+
+→ Container logs (last 100 lines):
+....................
+ERROR! Maximum number of retries (20) reached.
+
+Last check result:
+$ airflow db check
+/entrypoint: line 20: airflow: command not found
+
+
+📋 3. AIRFLOW WEBSERVER LOGS:
+----------------------------------------
+airflow-webserver  | ....................
+airflow-webserver  | ERROR! Maximum number of retries (20) reached.
+airflow-webserver  | 
+airflow-webserver  | Last check result:
+airflow-webserver  | $ airflow db check
+airflow-webserver  | /entrypoint: line 20: airflow: command not found
+airflow-webserver  | 
+
+🚨 4. AIRFLOW UI ERRORS:
+----------------------------------------
+airflow-webserver  | ERROR! Maximum number of retries (20) reached.
+
+📋 5. AIRFLOW SCHEDULER LOGS:
+----------------------------------------
+airflow-scheduler  | ....................
+airflow-scheduler  | ERROR! Maximum number of retries (20) reached.
+airflow-scheduler  | 
+airflow-scheduler  | Last check result:
+airflow-scheduler  | $ airflow db check
+airflow-scheduler  | /entrypoint: line 20: airflow: command not found
+airflow-scheduler  | 
+
+📋 6. AIRFLOW INIT LOGS:
+----------------------------------------
+airflow-init  | Requirement already satisfied: grpcio<2.0.0,>=1.0.0 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.67.1)
+airflow-init  | Requirement already satisfied: opentelemetry-exporter-otlp-proto-common==1.27.0 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.27.0)
+airflow-init  | Requirement already satisfied: opentelemetry-proto==1.27.0 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.27.0)
+airflow-init  | Requirement already satisfied: opentelemetry-sdk~=1.27.0 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.27.0)
+airflow-init  | Requirement already satisfied: protobuf<5.0,>=3.19 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-proto==1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (4.25.5)
+airflow-init  | Requirement already satisfied: time-machine>=2.6.0 in /home/airflow/.local/lib/python3.12/site-packages (from pendulum<4.0,>=3.0.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.16.0)
+airflow-init  | Requirement already satisfied: setuptools>=62.4.0 in /home/airflow/.local/lib/python3.12/site-packages (from python-daemon>=3.0.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (75.3.0)
+airflow-init  | Requirement already satisfied: text-unidecode>=1.3 in /home/airflow/.local/lib/python3.12/site-packages (from python-slugify>=5.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.3)
+airflow-init  | Requirement already satisfied: charset-normalizer<4,>=2 in /home/airflow/.local/lib/python3.12/site-packages (from requests<3,>=2.27.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (3.4.0)
+airflow-init  | Requirement already satisfied: urllib3<3,>=1.21.1 in /home/airflow/.local/lib/python3.12/site-packages (from requests<3,>=2.27.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.2.3)
+airflow-init  | Requirement already satisfied: greenlet!=0.4.17 in /home/airflow/.local/lib/python3.12/site-packages (from sqlalchemy<2.0,>=1.4.36->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (3.1.1)
+airflow-init  | Requirement already satisfied: aiohttp>=3.9.2 in /home/airflow/.local/lib/python3.12/site-packages (from apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (3.10.10)
+airflow-init  | Requirement already satisfied: aiohappyeyeballs>=2.3.0 in /home/airflow/.local/lib/python3.12/site-packages (from aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.4.3)
+airflow-init  | Requirement already satisfied: aiosignal>=1.1.2 in /home/airflow/.local/lib/python3.12/site-packages (from aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.3.1)
+airflow-init  | Requirement already satisfied: frozenlist>=1.1.1 in /home/airflow/.local/lib/python3.12/site-packages (from aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.5.0)
+airflow-init  | Requirement already satisfied: multidict<7.0,>=4.5 in /home/airflow/.local/lib/python3.12/site-packages (from aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (6.1.0)
+airflow-init  | Requirement already satisfied: yarl<2.0,>=1.12.0 in /home/airflow/.local/lib/python3.12/site-packages (from aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (1.17.1)
+airflow-init  | Requirement already satisfied: pycparser in /home/airflow/.local/lib/python3.12/site-packages (from cffi>=1.12->cryptography>=41.0.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.22)
+airflow-init  | Requirement already satisfied: zipp>=0.5 in /home/airflow/.local/lib/python3.12/site-packages (from importlib-metadata<=8.4.0,>=6.0->opentelemetry-api>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (3.20.2)
+airflow-init  | Requirement already satisfied: dnspython>=2.0.0 in /home/airflow/.local/lib/python3.12/site-packages (from email-validator>=1.0.5->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.7.0)
+airflow-init  | Requirement already satisfied: Babel>=2.3 in /home/airflow/.local/lib/python3.12/site-packages (from Flask-Babel<3,>=1->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (2.16.0)
+airflow-init  | Requirement already satisfied: limits>=3.13 in /home/airflow/.local/lib/python3.12/site-packages (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (3.13.0)
+airflow-init  | Requirement already satisfied: ordered-set<5,>4 in /home/airflow/.local/lib/python3.12/site-packages (from Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (4.1.0)
+airflow-init  | Requirement already satisfied: opentelemetry-semantic-conventions==0.48b0 in /home/airflow/.local/lib/python3.12/site-packages (from opentelemetry-sdk~=1.27.0->opentelemetry-exporter-otlp-proto-grpc==1.27.0->opentelemetry-exporter-otlp>=1.15.0->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (0.48b0)
+airflow-init  | Requirement already satisfied: propcache>=0.2.0 in /home/airflow/.local/lib/python3.12/site-packages (from yarl<2.0,>=1.12.0->aiohttp>=3.9.2->apache-airflow-providers-http->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (0.2.0)
+airflow-init  | Requirement already satisfied: importlib-resources>=1.3 in /home/airflow/.local/lib/python3.12/site-packages (from limits>=3.13->Flask-Limiter<4,>3->flask-appbuilder==4.5.2->apache-airflow-providers-fab>=1.0.2->apache-airflow>=2.8.0->apache-airflow-providers-postgres->-r /opt/airflow/requirements.txt (line 3)) (6.4.5)
+airflow-init  | 
+airflow-init  | [notice] A new release of pip is available: 24.2 -> 26.1.2
+airflow-init  | [notice] To update, run: pip install --upgrade pip
+airflow-init  | /home/airflow/.local/lib/python3.12/site-packages/airflow/configuration.py:859 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+airflow-init  | DB: postgresql+psycopg2://airflow:***@postgres:5432/airflow
+airflow-init  | Performing upgrade to the metadata database postgresql+psycopg2://airflow:***@postgres:5432/airflow
+airflow-init  | [2026-07-10T18:23:51.785+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+airflow-init  | [2026-07-10T18:23:51.786+0000] {migration.py:210} INFO - Will assume transactional DDL.
+airflow-init  | [2026-07-10T18:23:51.790+0000] {migration.py:207} INFO - Context impl PostgresqlImpl.
+airflow-init  | [2026-07-10T18:23:51.790+0000] {migration.py:210} INFO - Will assume transactional DDL.
+airflow-init  | INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+airflow-init  | INFO  [alembic.runtime.migration] Will assume transactional DDL.
+airflow-init  | INFO  [alembic.runtime.migration] Running stamp_revision  -> 5f2621c13b39
+airflow-init  | Database migrating done!
+airflow-init  | /home/airflow/.local/lib/python3.12/site-packages/airflow/configuration.py:859 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+airflow-init  | /home/airflow/.local/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-init  | [2026-07-10T18:24:03.096+0000] {override.py:1507} INFO - Inserted Role: Admin
+airflow-init  | [2026-07-10T18:24:03.107+0000] {override.py:964} WARNING - No user yet created, use flask fab command to do it.
+airflow-init  | [2026-07-10T18:24:03.279+0000] {override.py:1911} INFO - Created Permission View: can edit on Passwords
+airflow-init  | [2026-07-10T18:24:03.374+0000] {override.py:1962} INFO - Added Permission can edit on Passwords to role Admin
+airflow-init  | [2026-07-10T18:24:03.391+0000] {override.py:1911} INFO - Created Permission View: can read on Passwords
+airflow-init  | [2026-07-10T18:24:03.401+0000] {override.py:1962} INFO - Added Permission can read on Passwords to role Admin
+airflow-init  | [2026-07-10T18:24:03.428+0000] {override.py:1911} INFO - Created Permission View: can edit on My Password
+airflow-init  | [2026-07-10T18:24:03.437+0000] {override.py:1962} INFO - Added Permission can edit on My Password to role Admin
+airflow-init  | [2026-07-10T18:24:03.449+0000] {override.py:1911} INFO - Created Permission View: can read on My Password
+airflow-init  | [2026-07-10T18:24:03.457+0000] {override.py:1962} INFO - Added Permission can read on My Password to role Admin
+airflow-init  | [2026-07-10T18:24:03.489+0000] {override.py:1911} INFO - Created Permission View: can edit on My Profile
+airflow-init  | [2026-07-10T18:24:03.496+0000] {override.py:1962} INFO - Added Permission can edit on My Profile to role Admin
+airflow-init  | [2026-07-10T18:24:03.504+0000] {override.py:1911} INFO - Created Permission View: can read on My Profile
+airflow-init  | [2026-07-10T18:24:03.510+0000] {override.py:1962} INFO - Added Permission can read on My Profile to role Admin
+airflow-init  | [2026-07-10T18:24:03.587+0000] {override.py:1911} INFO - Created Permission View: can create on Users
+airflow-init  | [2026-07-10T18:24:03.593+0000] {override.py:1962} INFO - Added Permission can create on Users to role Admin
+airflow-init  | [2026-07-10T18:24:03.601+0000] {override.py:1911} INFO - Created Permission View: can read on Users
+airflow-init  | [2026-07-10T18:24:03.609+0000] {override.py:1962} INFO - Added Permission can read on Users to role Admin
+airflow-init  | [2026-07-10T18:24:03.618+0000] {override.py:1911} INFO - Created Permission View: can edit on Users
+airflow-init  | [2026-07-10T18:24:03.626+0000] {override.py:1962} INFO - Added Permission can edit on Users to role Admin
+airflow-init  | [2026-07-10T18:24:03.636+0000] {override.py:1911} INFO - Created Permission View: can delete on Users
+airflow-init  | [2026-07-10T18:24:03.651+0000] {override.py:1962} INFO - Added Permission can delete on Users to role Admin
+airflow-init  | [2026-07-10T18:24:03.687+0000] {override.py:1911} INFO - Created Permission View: menu access on List Users
+airflow-init  | [2026-07-10T18:24:03.699+0000] {override.py:1962} INFO - Added Permission menu access on List Users to role Admin
+airflow-init  | [2026-07-10T18:24:03.720+0000] {override.py:1911} INFO - Created Permission View: menu access on Security
+airflow-init  | [2026-07-10T18:24:03.728+0000] {override.py:1962} INFO - Added Permission menu access on Security to role Admin
+airflow-init  | [2026-07-10T18:24:03.881+0000] {override.py:1911} INFO - Created Permission View: can create on Roles
+airflow-init  | [2026-07-10T18:24:03.891+0000] {override.py:1962} INFO - Added Permission can create on Roles to role Admin
+airflow-init  | [2026-07-10T18:24:03.944+0000] {override.py:1911} INFO - Created Permission View: can read on Roles
+airflow-init  | [2026-07-10T18:24:03.952+0000] {override.py:1962} INFO - Added Permission can read on Roles to role Admin
+airflow-init  | [2026-07-10T18:24:03.965+0000] {override.py:1911} INFO - Created Permission View: can edit on Roles
+airflow-init  | [2026-07-10T18:24:04.599+0000] {override.py:1962} INFO - Added Permission can edit on Roles to role Admin
+airflow-init  | [2026-07-10T18:24:04.811+0000] {override.py:1911} INFO - Created Permission View: can delete on Roles
+airflow-init  | [2026-07-10T18:24:04.932+0000] {override.py:1962} INFO - Added Permission can delete on Roles to role Admin
+airflow-init  | [2026-07-10T18:24:05.257+0000] {override.py:1911} INFO - Created Permission View: menu access on List Roles
+airflow-init  | [2026-07-10T18:24:05.271+0000] {override.py:1962} INFO - Added Permission menu access on List Roles to role Admin
+airflow-init  | [2026-07-10T18:24:05.409+0000] {override.py:1911} INFO - Created Permission View: can read on User Stats Chart
+airflow-init  | [2026-07-10T18:24:05.418+0000] {override.py:1962} INFO - Added Permission can read on User Stats Chart to role Admin
+airflow-init  | [2026-07-10T18:24:05.510+0000] {override.py:1911} INFO - Created Permission View: menu access on User's Statistics
+airflow-init  | [2026-07-10T18:24:05.604+0000] {override.py:1962} INFO - Added Permission menu access on User's Statistics to role Admin
+airflow-init  | [2026-07-10T18:24:06.175+0000] {override.py:1911} INFO - Created Permission View: can read on Permissions
+airflow-init  | [2026-07-10T18:24:06.268+0000] {override.py:1962} INFO - Added Permission can read on Permissions to role Admin
+airflow-init  | [2026-07-10T18:24:06.802+0000] {override.py:1911} INFO - Created Permission View: menu access on Actions
+airflow-init  | [2026-07-10T18:24:06.885+0000] {override.py:1962} INFO - Added Permission menu access on Actions to role Admin
+airflow-init  | [2026-07-10T18:24:07.087+0000] {override.py:1911} INFO - Created Permission View: can read on View Menus
+airflow-init  | [2026-07-10T18:24:07.183+0000] {override.py:1962} INFO - Added Permission can read on View Menus to role Admin
+airflow-init  | [2026-07-10T18:24:07.632+0000] {override.py:1911} INFO - Created Permission View: menu access on Resources
+airflow-init  | [2026-07-10T18:24:07.949+0000] {override.py:1962} INFO - Added Permission menu access on Resources to role Admin
+airflow-init  | [2026-07-10T18:24:08.274+0000] {override.py:1911} INFO - Created Permission View: can read on Permission Views
+airflow-init  | [2026-07-10T18:24:08.491+0000] {override.py:1962} INFO - Added Permission can read on Permission Views to role Admin
+airflow-init  | [2026-07-10T18:24:08.508+0000] {override.py:1911} INFO - Created Permission View: menu access on Permission Pairs
+airflow-init  | [2026-07-10T18:24:08.514+0000] {override.py:1962} INFO - Added Permission menu access on Permission Pairs to role Admin
+airflow-init  | User "admin" does not exist
+airflow-init  | /home/airflow/.local/lib/python3.12/site-packages/airflow/configuration.py:859 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+airflow-init  | /home/airflow/.local/lib/python3.12/site-packages/flask_limiter/extension.py:333 UserWarning: Using the in-memory storage for tracking rate limits as no storage was explicitly specified. This is not recommended for production use. See: https://flask-limiter.readthedocs.io#configuring-a-storage-backend for documentation about configuring the storage backend.
+airflow-init  | [2026-07-10T18:24:17.352+0000] {override.py:964} WARNING - No user yet created, use flask fab command to do it.
+airflow-init  | [2026-07-10T18:24:18.446+0000] {override.py:1596} INFO - Added user admin
+airflow-init  | User "admin" created with role "Admin"
+
+📦 7. CHECKING SPARK IN WEBSERVER:
+----------------------------------------
+→ Checking if /opt/spark exists:
+service "airflow-webserver" is not running
+❌ /opt/spark NOT FOUND!
+
+→ Checking spark-submit location:
+service "airflow-webserver" is not running
+❌ spark-submit NOT FOUND in PATH!
+
+→ Checking Spark version:
+service "airflow-webserver" is not running
+❌ spark-submit command failed!
+
+🔧 8. CHECKING JAVA:
+----------------------------------------
+service "airflow-webserver" is not running
+❌ Java not found!
+
+🔧 9. ENVIRONMENT VARIABLES:
+----------------------------------------
+→ SPARK_HOME:
+service "airflow-webserver" is not running
+❌ Could not get SPARK_HOME!
+
+→ JAVA_HOME:
+service "airflow-webserver" is not running
+❌ Could not get JAVA_HOME!
+
+→ PATH (first 200 chars):
+service "airflow-webserver" is not running
+❌ Could not get PATH!
+
+🐍 10. PYTHON PACKAGES:
+----------------------------------------
+service "airflow-webserver" is not running
+❌ PySpark or Airflow packages not found!
+
+🌐 11. WEBSERVER ENDPOINT CHECK:
+----------------------------------------
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to localhost port 8080 after 5 ms: Could not connect to server
+❌ Webserver not responding!
+
+🖼️  12. DOCKER IMAGE INFO:
+----------------------------------------
+airflow-custom:latest                        f4c58ad2a07c       4.08GB          1.3GB   U    
+airflow-learning-airflow-scheduler:latest    f3bdd90f4943       4.08GB          1.3GB        
+airflow-learning-airflow-webserver:latest    d01b60f7683e       4.08GB          1.3GB        
+apache/airflow:2.10.2                        2808d3a77c3c       1.97GB          401MB        
+apache/airflow:2.10.3                        a297f7672778       2.08GB          421MB   U    
+
+📄 13. DOCKERFILE CHECK:
+----------------------------------------
+✅ Dockerfile exists
+→ Full content:
+FROM apache/airflow:2.10.3
+
+USER root
+
+# Install Java and Spark
+RUN apt-get update -qq && \
+    apt-get install -y -qq wget openjdk-17-jre-headless && \
+    wget -q https://archive.apache.org/dist/spark/spark-3.5.4/spark-3.5.4-bin-hadoop3.tgz && \
+    tar -xzf spark-3.5.4-bin-hadoop3.tgz -C /opt/ && \
+    mv /opt/spark-3.5.4-bin-hadoop3 /opt/spark && \
+    rm spark-3.5.4-bin-hadoop3.tgz && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Set permissions
+RUN chown -R 50000:0 /opt/spark && \
+    chmod -R 755 /opt/spark
+
+# Switch back to airflow user
+USER 50000
+
+# Set environment variables
+ENV SPARK_HOME=/opt/spark
+ENV PATH=/opt/spark/bin:${PATH}
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
+# Don't override ENTRYPOINT or CMD - let the base image handle it
+📝 14. DOCKER-COMPOSE WEBSERVER CONFIG:
+----------------------------------------
+  airflow-webserver:
+    build: .
+    image: airflow-custom:latest
+    container_name: airflow-webserver
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "dev-secret-key"
+      AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.session,airflow.api.auth.backend.basic_auth
+      AIRFLOW__WEBSERVER__WTF_CSRF_ENABLED: "False"
+      AIRFLOW_USERNAME: admin
+      AIRFLOW_PASSWORD: admin
+      AIRFLOW_EMAIL: admin@example.com
+      AIRFLOW_FIRST_NAME: Airflow
+      AIRFLOW_LAST_NAME: Admin
+      PYTHONPATH: /opt/airflow
+      SPARK_HOME: /opt/spark
+      PATH: /opt/spark/bin:/opt/airflow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      JAVA_HOME: /usr/lib/jvm/java-17-openjdk-amd64
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./data:/opt/airflow/data
+      - ./sql:/opt/airflow/sql
+      - ./spark:/opt/airflow/spark
+      - ./requirements.txt:/opt/airflow/requirements.txt
+
+💾 15. DISK SPACE:
+----------------------------------------
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              392M  2.8M  389M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   95G   80G   11G  89% /
+tmpfs                              2.0G  119M  1.8G   7% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+efivarfs                           128M   33K  128M   1% /sys/firmware/efi/efivars
+tmpfs                              2.0G     0  2.0G   0% /run/qemu
+/dev/sda2                          2.0G  218M  1.6G  12% /boot
+/dev/sda1                          1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              392M  176K  392M   1% /run/user/1000
+
+========================================
+✅ Debug collection complete!
+📄 Log saved to: ./debug_logs/spark_debug_20260710_134938.txt

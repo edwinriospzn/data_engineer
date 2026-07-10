@@ -2501,3 +2501,66 @@
 [2026-07-10T20:47:28.490+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:47:28.490+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-07-10T20:47:28.521+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:47:28.521+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
 [2026-07-10T20:47:28.558+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.186 seconds
+[2026-07-10T20:47:58.957+0000] {processor.py:186} INFO - Started process (PID=784) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:47:58.958+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:47:58.962+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:47:58.962+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:47:58.990+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:47:59.052+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:47:59.051+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:47:59.091+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:47:59.091+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:47:59.204+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.266 seconds
+[2026-07-10T20:48:29.527+0000] {processor.py:186} INFO - Started process (PID=834) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:48:29.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:48:29.531+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:48:29.530+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:48:29.543+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:48:29.605+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:48:29.605+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:48:29.658+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:48:29.657+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:48:29.731+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.212 seconds
+[2026-07-10T20:49:00.421+0000] {processor.py:186} INFO - Started process (PID=884) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:00.422+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:49:00.426+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:00.425+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:00.448+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:00.598+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:00.597+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:49:00.637+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:00.636+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:49:00.682+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.282 seconds
+[2026-07-10T20:49:30.990+0000] {processor.py:186} INFO - Started process (PID=936) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:30.991+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:49:30.995+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:30.994+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:31.013+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:49:31.056+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:31.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:49:31.080+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:49:31.080+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:49:31.104+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.123 seconds
+[2026-07-10T20:50:03.812+0000] {processor.py:186} INFO - Started process (PID=984) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:03.896+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:50:04.013+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:04.010+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:04.178+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:04.330+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:04.330+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:50:04.685+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:04.685+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:50:04.726+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.925 seconds
+[2026-07-10T20:50:34.954+0000] {processor.py:186} INFO - Started process (PID=1234) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:34.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:50:34.964+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:34.963+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:34.985+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:50:35.113+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:35.113+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:50:35.176+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:50:35.175+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:50:35.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.276 seconds
+[2026-07-10T20:51:05.861+0000] {processor.py:186} INFO - Started process (PID=1394) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:05.862+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:51:05.866+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:05.865+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:05.887+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:05.943+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:05.942+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:51:06.198+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:06.198+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:51:06.219+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.369 seconds
+[2026-07-10T20:51:36.771+0000] {processor.py:186} INFO - Started process (PID=1446) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:36.773+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:51:36.778+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:36.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:36.796+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:51:36.841+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:36.840+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:51:36.859+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:51:36.859+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:51:36.880+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.119 seconds
+[2026-07-10T20:52:07.335+0000] {processor.py:186} INFO - Started process (PID=1494) to work on /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:52:07.337+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/07_dynamic_mapping.py for tasks to queue
+[2026-07-10T20:52:07.344+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:07.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:52:07.372+0000] {processor.py:925} INFO - DAG(s) '07_dynamic_mapping' retrieved from /opt/airflow/dags/07_dynamic_mapping.py
+[2026-07-10T20:52:07.470+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:07.470+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:52:07.781+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:07.781+0000] {dag.py:4180} INFO - Setting next_dagrun for 07_dynamic_mapping to None, run_after=None
+[2026-07-10T20:52:07.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/07_dynamic_mapping.py took 0.489 seconds

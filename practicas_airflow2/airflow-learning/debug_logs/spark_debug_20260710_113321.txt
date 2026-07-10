@@ -1,0 +1,122 @@
+========================================
+Spark Debug Logs - Fri 10 Jul 2026 11:33:21 AM -05
+========================================
+
+📦 1. CONTAINER STATUS:
+NAME                   IMAGE                   COMMAND                  SERVICE             CREATED         STATUS                   PORTS
+airflow-etl-postgres   postgres:16             "docker-entrypoint.s…"   etl-postgres        5 minutes ago   Up 5 minutes (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+airflow-pgadmin        dpage/pgadmin4:8        "/entrypoint.sh"         pgadmin             5 minutes ago   Up 5 minutes             443/tcp, 0.0.0.0:5050->80/tcp, [::]:5050->80/tcp
+airflow-postgres       postgres:16             "docker-entrypoint.s…"   postgres            5 minutes ago   Up 5 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+airflow-python-dev     python:3.11-slim        "bash -lc 'pip insta…"   python-dev          5 minutes ago   Up 5 minutes             
+airflow-scheduler      apache/airflow:2.10.3   "/usr/bin/dumb-init …"   airflow-scheduler   5 minutes ago   Up 4 minutes             8080/tcp
+airflow-webserver      apache/airflow:2.10.3   "/usr/bin/dumb-init …"   airflow-webserver   5 minutes ago   Up 4 minutes             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+
+📦 2. CHECKING SPARK IN WEBSERVER:
+----------------------------------------
+→ Checking if /opt/spark exists:
+ls: cannot access '/opt/spark': No such file or directory
+❌ /opt/spark NOT FOUND!
+
+→ Checking spark-submit location:
+❌ spark-submit NOT FOUND in PATH!
+
+→ Checking Spark version:
+OCI runtime exec failed: exec failed: unable to start container process: exec: "spark-submit": executable file not found in $PATH
+❌ spark-submit command failed!
+
+→ Checking Java version:
+OCI runtime exec failed: exec failed: unable to start container process: exec: "java": executable file not found in $PATH
+❌ Java not found!
+
+🔧 3. ENVIRONMENT VARIABLES:
+----------------------------------------
+→ SPARK_HOME:
+$SPARK_HOME
+
+→ JAVA_HOME:
+$JAVA_HOME
+
+→ PATH:
+$PATH
+
+🐍 4. PYTHON PACKAGES:
+----------------------------------------
+❌ PySpark not installed!
+
+📋 5. WEBSERVER LOGS (Spark errors):
+----------------------------------------
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:28 +0000] "GET /dags/08_spark/grid HTTP/1.1" 200 9246 "http://localhost:8080/home" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:28 +0000] "GET /object/grid_data?dag_id=08_spark&num_runs=25 HTTP/1.1" 200 821 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:28 +0000] "GET /object/next_run_datasets/08_spark HTTP/1.1" 200 39 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:28 +0000] "GET /api/v1/dags/08_spark HTTP/1.1" 200 1035 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:28 +0000] "GET /api/v1/dags/08_spark/details HTTP/1.1" 200 1420 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:31 +0000] "POST /dags/08_spark/trigger?origin=%2Fdags%2F08_spark%2Fgrid HTTP/1.1" 302 387 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:31 +0000] "GET /dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00 HTTP/1.1" 200 9394 "http://localhost:8080/dags/08_spark/grid" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:32 +0000] "GET /object/grid_data?dag_id=08_spark&num_runs=25 HTTP/1.1" 200 1935 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:32 +0000] "GET /object/next_run_datasets/08_spark HTTP/1.1" 200 39 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:35 +0000] "GET /object/grid_data?dag_id=08_spark&num_runs=25 HTTP/1.1" 200 2191 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:30:38 +0000] "GET /object/grid_data?dag_id=08_spark&num_runs=25 HTTP/1.1" 200 2351 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:31:09 +0000] "GET /api/v1/dags/08_spark HTTP/1.1" 200 1036 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00&tab=code" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:31:09 +0000] "GET /api/v1/dagSources/Ii9vcHQvYWlyZmxvdy9kYWdzLzA4X3NwYXJrLnB5Ig.FHnUEcpOohypBjURRkY6WD7m4HA HTTP/1.1" 200 1595 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00&tab=code" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:31:13 +0000] "GET /api/v1/dags/08_spark/dagRuns/manual__2026-07-10T16:30:31.759843+00:00/taskInstances/run_word_count HTTP/1.1" 200 1091 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00&tab=logs&task_id=run_word_count" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+airflow-webserver  | 172.21.0.1 - - [10/Jul/2026:16:31:13 +0000] "GET /api/v1/dags/08_spark/dagRuns/manual__2026-07-10T16:30:31.759843+00:00/taskInstances/run_word_count/logs/1?full_content=false HTTP/1.1" 200 8331 "http://localhost:8080/dags/08_spark/grid?dag_run_id=manual__2026-07-10T16%3A30%3A31.759843%2B00%3A00&tab=logs&task_id=run_word_count" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36"
+
+📋 6. SCHEDULER LOGS (Spark errors):
+----------------------------------------
+airflow-scheduler  | 	<TaskInstance: 08_spark.run_word_count manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>
+airflow-scheduler  | 	<TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>
+airflow-scheduler  | [2026-07-10T16:30:34.275+0000] {scheduler_job_runner.py:495} INFO - DAG 08_spark has 0/16 running and queued tasks
+airflow-scheduler  | [2026-07-10T16:30:34.275+0000] {scheduler_job_runner.py:495} INFO - DAG 08_spark has 1/16 running and queued tasks
+airflow-scheduler  | 	<TaskInstance: 08_spark.run_word_count manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>
+airflow-scheduler  | 	<TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>
+airflow-scheduler  | [2026-07-10T16:30:34.283+0000] {scheduler_job_runner.py:736} INFO - Trying to enqueue tasks: [<TaskInstance: 08_spark.run_word_count manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>, <TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T16:30:31.759843+00:00 [scheduled]>] for executor: LocalExecutor(parallelism=32)
+airflow-scheduler  | [2026-07-10T16:30:34.294+0000] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='08_spark', task_id='run_word_count', run_id='manual__2026-07-10T16:30:31.759843+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 2 and queue default
+airflow-scheduler  | [2026-07-10T16:30:34.297+0000] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', '08_spark', 'run_word_count', 'manual__2026-07-10T16:30:31.759843+00:00', '--local', '--subdir', 'DAGS_FOLDER/08_spark.py']
+airflow-scheduler  | [2026-07-10T16:30:34.298+0000] {scheduler_job_runner.py:680} INFO - Sending TaskInstanceKey(dag_id='08_spark', task_id='run_sales_processing', run_id='manual__2026-07-10T16:30:31.759843+00:00', try_number=1, map_index=-1) to LocalExecutor with priority 2 and queue default
+airflow-scheduler  | [2026-07-10T16:30:34.299+0000] {base_executor.py:168} INFO - Adding to queue: ['airflow', 'tasks', 'run', '08_spark', 'run_sales_processing', 'manual__2026-07-10T16:30:31.759843+00:00', '--local', '--subdir', 'DAGS_FOLDER/08_spark.py']
+airflow-scheduler  | [2026-07-10T16:30:34.326+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', '08_spark', 'run_sales_processing', 'manual__2026-07-10T16:30:31.759843+00:00', '--local', '--subdir', 'DAGS_FOLDER/08_spark.py']
+airflow-scheduler  | [2026-07-10T16:30:34.327+0000] {local_executor.py:93} INFO - QueuedLocalWorker running ['airflow', 'tasks', 'run', '08_spark', 'run_word_count', 'manual__2026-07-10T16:30:31.759843+00:00', '--local', '--subdir', 'DAGS_FOLDER/08_spark.py']
+airflow-scheduler  | [2026-07-10T16:30:34.576+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/***/dags/08_spark.py
+airflow-scheduler  | [2026-07-10T16:30:34.574+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/***/dags/08_spark.py
+airflow-scheduler  | [2026-07-10T16:30:34.968+0000] {task_command.py:467} INFO - Running <TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T16:30:31.759843+00:00 [queued]> on host 80d539e6c893
+airflow-scheduler  | [2026-07-10T16:30:34.969+0000] {task_command.py:467} INFO - Running <TaskInstance: 08_spark.run_word_count manual__2026-07-10T16:30:31.759843+00:00 [queued]> on host 80d539e6c893
+airflow-scheduler  | [2026-07-10T16:30:36.928+0000] {dagrun.py:823} ERROR - Marking run <DagRun 08_spark @ 2026-07-10 16:30:31.759843+00:00: manual__2026-07-10T16:30:31.759843+00:00, state:running, queued_at: 2026-07-10 16:30:31.802645+00:00. externally triggered: True> failed
+airflow-scheduler  | [2026-07-10T16:30:36.931+0000] {dagrun.py:905} INFO - DagRun Finished: dag_id=08_spark, execution_date=2026-07-10 16:30:31.759843+00:00, run_id=manual__2026-07-10T16:30:31.759843+00:00, run_start_date=2026-07-10 16:30:33.094310+00:00, run_end_date=2026-07-10 16:30:36.930626+00:00, run_duration=3.836316, state=failed, external_trigger=True, run_type=manual, data_interval_start=2026-07-10 16:30:31.759843+00:00, data_interval_end=2026-07-10 16:30:31.759843+00:00, dag_hash=e8a7b139a23435247cf35b458c9e1b4d
+airflow-scheduler  | [2026-07-10T16:30:36.960+0000] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='08_spark', task_id='run_word_count', run_id='manual__2026-07-10T16:30:31.759843+00:00', try_number=1, map_index=-1)
+airflow-scheduler  | [2026-07-10T16:30:36.960+0000] {scheduler_job_runner.py:764} INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='08_spark', task_id='run_sales_processing', run_id='manual__2026-07-10T16:30:31.759843+00:00', try_number=1, map_index=-1)
+airflow-scheduler  | [2026-07-10T16:30:39.555+0000] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=08_spark, task_id=run_word_count, run_id=manual__2026-07-10T16:30:31.759843+00:00, map_index=-1, run_start_date=2026-07-10 16:30:35.233663+00:00, run_end_date=2026-07-10 16:30:35.779710+00:00, run_duration=0.546047, state=failed, executor=LocalExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, job_id=2, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2026-07-10 16:30:34.278835+00:00, queued_by_job_id=1, pid=317
+airflow-scheduler  | [2026-07-10T16:30:39.556+0000] {scheduler_job_runner.py:801} INFO - TaskInstance Finished: dag_id=08_spark, task_id=run_sales_processing, run_id=manual__2026-07-10T16:30:31.759843+00:00, map_index=-1, run_start_date=2026-07-10 16:30:35.233281+00:00, run_end_date=2026-07-10 16:30:35.785598+00:00, run_duration=0.552317, state=failed, executor=LocalExecutor(parallelism=32), executor_state=success, try_number=1, max_tries=0, job_id=3, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2026-07-10 16:30:34.278835+00:00, queued_by_job_id=1, pid=315
+
+🖼️  7. DOCKER IMAGE INFO:
+----------------------------------------
+apache/airflow:2.10.2                        2808d3a77c3c       1.97GB          401MB        
+apache/airflow:2.10.3                        a297f7672778       2.08GB          421MB   U    
+
+🧪 8. TESTING SPARK-SUBMIT:
+----------------------------------------
+bash: line 1: spark-submit: command not found
+
+📄 9. DOCKERFILE CHECK:
+----------------------------------------
+❌ Dockerfile NOT FOUND!
+
+📝 10. DOCKER-COMPOSE SPARK CONFIG:
+----------------------------------------
+No Spark config found in docker-compose.yml
+
+💾 11. DISK SPACE:
+----------------------------------------
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              392M  2.7M  389M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   95G   71G   20G  78% /
+tmpfs                              2.0G  153M  1.8G   8% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+efivarfs                           128M   33K  128M   1% /sys/firmware/efi/efivars
+tmpfs                              2.0G     0  2.0G   0% /run/qemu
+/dev/sda2                          2.0G  218M  1.6G  12% /boot
+/dev/sda1                          1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              392M  172K  392M   1% /run/user/1000
+
+========================================
+✅ Debug collection complete!
+📄 Log saved to: ./debug_logs/spark_debug_20260710_113321.txt

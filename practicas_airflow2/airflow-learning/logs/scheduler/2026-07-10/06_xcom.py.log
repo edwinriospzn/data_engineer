@@ -3081,3 +3081,31 @@
 [2026-07-10T20:52:07.909+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:07.909+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-07-10T20:52:08.163+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:08.163+0000] {dag.py:4180} INFO - Setting next_dagrun for 06_xcom to None, run_after=None
 [2026-07-10T20:52:08.182+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/06_xcom.py took 0.354 seconds
+[2026-07-10T20:52:38.711+0000] {processor.py:186} INFO - Started process (PID=1551) to work on /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:52:38.713+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/06_xcom.py for tasks to queue
+[2026-07-10T20:52:38.718+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:38.718+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:52:38.745+0000] {processor.py:925} INFO - DAG(s) '06_xcom' retrieved from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:52:38.813+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:38.812+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:52:38.852+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:52:38.851+0000] {dag.py:4180} INFO - Setting next_dagrun for 06_xcom to None, run_after=None
+[2026-07-10T20:52:38.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/06_xcom.py took 0.184 seconds
+[2026-07-10T20:53:09.991+0000] {processor.py:186} INFO - Started process (PID=1599) to work on /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:09.993+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/06_xcom.py for tasks to queue
+[2026-07-10T20:53:09.999+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:09.998+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:10.019+0000] {processor.py:925} INFO - DAG(s) '06_xcom' retrieved from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:10.068+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:10.067+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:53:10.325+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:10.325+0000] {dag.py:4180} INFO - Setting next_dagrun for 06_xcom to None, run_after=None
+[2026-07-10T20:53:10.360+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/06_xcom.py took 0.381 seconds
+[2026-07-10T20:53:40.727+0000] {processor.py:186} INFO - Started process (PID=1651) to work on /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:40.729+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/06_xcom.py for tasks to queue
+[2026-07-10T20:53:40.738+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:40.736+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:40.760+0000] {processor.py:925} INFO - DAG(s) '06_xcom' retrieved from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:53:40.827+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:40.827+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:53:40.860+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:53:40.860+0000] {dag.py:4180} INFO - Setting next_dagrun for 06_xcom to None, run_after=None
+[2026-07-10T20:53:40.896+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/06_xcom.py took 0.187 seconds
+[2026-07-10T20:54:11.711+0000] {processor.py:186} INFO - Started process (PID=1701) to work on /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:54:11.713+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/06_xcom.py for tasks to queue
+[2026-07-10T20:54:11.721+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:54:11.720+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:54:11.747+0000] {processor.py:925} INFO - DAG(s) '06_xcom' retrieved from /opt/airflow/dags/06_xcom.py
+[2026-07-10T20:54:11.835+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:54:11.834+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T20:54:12.203+0000] {logging_mixin.py:190} INFO - [2026-07-10T20:54:12.203+0000] {dag.py:4180} INFO - Setting next_dagrun for 06_xcom to None, run_after=None
+[2026-07-10T20:54:12.261+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/06_xcom.py took 0.568 seconds

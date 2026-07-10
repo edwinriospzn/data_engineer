@@ -1,0 +1,54 @@
+[2026-07-10T20:50:17.932+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T20:50:17.976+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T20:50:14.227774+00:00 [queued]>
+[2026-07-10T20:50:18.000+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T20:50:14.227774+00:00 [queued]>
+[2026-07-10T20:50:18.001+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-10T20:50:18.028+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_sales_processing> on 2026-07-10 20:50:14.227774+00:00
+[2026-07-10T20:50:18.043+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '08_spark', 'run_sales_processing', 'manual__2026-07-10T20:50:14.227774+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/08_spark.py', '--cfg-path', '/tmp/tmpqboek82z']
+[2026-07-10T20:50:18.048+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask run_sales_processing
+[2026-07-10T20:50:18.047+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1021) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-10T20:50:18.051+0000] {standard_task_runner.py:72} INFO - Started process 1024 to run task
+[2026-07-10T20:50:18.142+0000] {task_command.py:467} INFO - Running <TaskInstance: 08_spark.run_sales_processing manual__2026-07-10T20:50:14.227774+00:00 [running]> on host 20339193eb31
+[2026-07-10T20:50:18.328+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='08_spark' AIRFLOW_CTX_TASK_ID='run_sales_processing' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T20:50:14.227774+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T20:50:14.227774+00:00'
+[2026-07-10T20:50:18.329+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T20:50:47.426+0000] {logging_mixin.py:190} INFO - 
+📊 RAW DATA:
+[2026-07-10T20:50:48.157+0000] {logging_mixin.py:190} INFO - +--------------+-----------+----------+------+-----------+----------------+
+|transaction_id|customer_id|product_id|amount|   category|transaction_date|
++--------------+-----------+----------+------+-----------+----------------+
+|          1001|       C001|      P101| 150.5|Electronics|      2026-07-01|
+|          1002|       C002|      P102|  45.0|      Books|      2026-07-02|
+|          1003|       C001|      P103| 89.99|   Clothing|      2026-07-03|
+|          1004|       C003|      P101|299.99|Electronics|      2026-07-04|
+|          1005|       C002|      P104|  12.5|      Books|      2026-07-05|
+|          1006|       C004|      P105|  67.3|   Clothing|      2026-07-06|
+|          1007|       C001|      P102|  45.0|      Books|      2026-07-07|
+|          1008|       C003|      P106| 120.0|Electronics|      2026-07-08|
+|          1009|       C005|      P107|  34.5|      Books|      2026-07-09|
+|          1010|       C004|      P108| 89.99|   Clothing|      2026-07-10|
++--------------+-----------+----------+------+-----------+----------------+
+[2026-07-10T20:50:48.350+0000] {logging_mixin.py:190} INFO - 
+💰 SALES BY CATEGORY:
+[2026-07-10T20:50:50.988+0000] {logging_mixin.py:190} INFO - +-----------+------------------+------------------+-----------------+
+|   category|     total_revenue|        avg_amount|transaction_count|
++-----------+------------------+------------------+-----------------+
+|Electronics|            570.49|190.16333333333333|                3|
+|   Clothing|247.27999999999997| 82.42666666666666|                3|
+|      Books|             137.0|             34.25|                4|
++-----------+------------------+------------------+-----------------+
+[2026-07-10T20:50:51.106+0000] {logging_mixin.py:190} INFO - 
+🏆 TOP 5 PRODUCTS BY REVENUE:
+[2026-07-10T20:50:52.726+0000] {logging_mixin.py:190} INFO - +----------+-------------+
+|product_id|total_revenue|
++----------+-------------+
+|      P101|       450.49|
+|      P106|        120.0|
+|      P102|         90.0|
+|      P103|        89.99|
+|      P108|        89.99|
++----------+-------------+
+[2026-07-10T20:50:53.455+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-07-10T20:50:53.492+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T20:50:53.493+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=08_spark, task_id=run_sales_processing, run_id=manual__2026-07-10T20:50:14.227774+00:00, execution_date=20260710T205014, start_date=20260710T205017, end_date=20260710T205053
+[2026-07-10T20:50:53.585+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T20:50:53.689+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T20:50:53.695+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

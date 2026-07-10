@@ -20,7 +20,24 @@ fi
 
 mkdir -p "$ROOT_DIR"/logs "$ROOT_DIR"/plugins "$ROOT_DIR"/dags "$ROOT_DIR"/data "$ROOT_DIR"/sql "$ROOT_DIR"/spark
 
+# Build custom image with PySpark pre-installed
+echo "🔨 Building custom Airflow image with PySpark..."
+docker compose build
+
+# Start containers
 docker compose up -d postgres etl-postgres pgadmin airflow-init airflow-webserver airflow-scheduler python-dev
+
+echo ""
+echo "⏳ Waiting for services to be ready..."
+sleep 15
+
+echo "📋 Checking webserver status..."
+if docker compose logs --tail=50 airflow-webserver 2>&1 | grep -qi "error\|exception\|traceback"; then
+  echo "⚠️  Errors found in logs:"
+  docker compose logs --tail=50 airflow-webserver | grep -i "error\|exception\|traceback"
+else
+  echo "✅ No errors found"
+fi
 
 echo ""
 echo "Airflow UI: http://localhost:8080"

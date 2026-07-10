@@ -1,0 +1,91 @@
+========================================
+Spark Debug Logs - Fri 10 Jul 2026 03:23:43 PM -05
+========================================
+
+📦 1. CONTAINER STATUS:
+NAME                   IMAGE                   COMMAND                  SERVICE             CREATED         STATUS                   PORTS
+airflow-etl-postgres   postgres:16             "docker-entrypoint.s…"   etl-postgres        2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp
+airflow-pgadmin        dpage/pgadmin4:8        "/entrypoint.sh"         pgadmin             2 minutes ago   Up 2 minutes             443/tcp, 0.0.0.0:5050->80/tcp, [::]:5050->80/tcp
+airflow-postgres       postgres:16             "docker-entrypoint.s…"   postgres            2 minutes ago   Up 2 minutes (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+airflow-python-dev     python:3.11-slim        "bash -lc 'pip insta…"   python-dev          2 minutes ago   Up 2 minutes             
+airflow-scheduler      apache/airflow:2.10.3   "/usr/bin/dumb-init …"   airflow-scheduler   2 minutes ago   Up 35 seconds            8080/tcp
+airflow-webserver      apache/airflow:2.10.3   "/usr/bin/dumb-init …"   airflow-webserver   2 minutes ago   Up 35 seconds            0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+
+📦 2. CHECKING SPARK IN WEBSERVER:
+----------------------------------------
+→ Checking if /opt/spark exists:
+ls: cannot access '/opt/spark': No such file or directory
+❌ /opt/spark NOT FOUND!
+
+→ Checking spark-submit location:
+❌ spark-submit NOT FOUND in PATH!
+
+→ Checking Spark version:
+OCI runtime exec failed: exec failed: unable to start container process: exec: "spark-submit": executable file not found in $PATH
+❌ spark-submit command failed!
+
+→ Checking Java version:
+OCI runtime exec failed: exec failed: unable to start container process: exec: "java": executable file not found in $PATH
+❌ Java not found!
+
+🔧 3. ENVIRONMENT VARIABLES:
+----------------------------------------
+→ SPARK_HOME:
+$SPARK_HOME
+
+→ JAVA_HOME:
+$JAVA_HOME
+
+→ PATH:
+$PATH
+
+🐍 4. PYTHON PACKAGES:
+----------------------------------------
+❌ PySpark not installed!
+
+📋 5. WEBSERVER LOGS (Spark errors):
+----------------------------------------
+airflow-webserver  | Collecting pyspark (from -r /opt/airflow/requirements.txt (line 4))
+airflow-webserver  |   Downloading pyspark-4.1.2.tar.gz (455.4 MB)
+
+📋 6. SCHEDULER LOGS (Spark errors):
+----------------------------------------
+airflow-scheduler  | Collecting pyspark (from -r /opt/airflow/requirements.txt (line 4))
+airflow-scheduler  |   Downloading pyspark-4.1.2.tar.gz (455.4 MB)
+
+🖼️  7. DOCKER IMAGE INFO:
+----------------------------------------
+airflow-custom:latest                        f4c58ad2a07c       4.08GB          1.3GB        
+airflow-learning-airflow-scheduler:latest    f3bdd90f4943       4.08GB          1.3GB        
+airflow-learning-airflow-webserver:latest    d01b60f7683e       4.08GB          1.3GB        
+apache/airflow:2.10.2                        2808d3a77c3c       1.97GB          401MB        
+apache/airflow:2.10.3                        a297f7672778       2.08GB          421MB   U    
+
+🧪 8. TESTING SPARK-SUBMIT:
+----------------------------------------
+bash: line 1: spark-submit: command not found
+
+📄 9. DOCKERFILE CHECK:
+----------------------------------------
+❌ Dockerfile NOT FOUND!
+
+📝 10. DOCKER-COMPOSE SPARK CONFIG:
+----------------------------------------
+No Spark config found in docker-compose.yml
+
+💾 11. DISK SPACE:
+----------------------------------------
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              392M  3.0M  389M   1% /run
+/dev/mapper/ubuntu--vg-ubuntu--lv   95G   85G  5.8G  94% /
+tmpfs                              2.0G  148M  1.8G   8% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+efivarfs                           128M   33K  128M   1% /sys/firmware/efi/efivars
+tmpfs                              2.0G     0  2.0G   0% /run/qemu
+/dev/sda2                          2.0G  218M  1.6G  12% /boot
+/dev/sda1                          1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs                              392M  184K  392M   1% /run/user/1000
+
+========================================
+✅ Debug collection complete!
+📄 Log saved to: ./debug_logs/spark_debug_20260710_152343.txt

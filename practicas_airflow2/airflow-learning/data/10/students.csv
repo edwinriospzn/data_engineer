@@ -1,0 +1,11 @@
+student_id,name,email,major,year,enrollment_date
+1,Ana García,ana@email.com,Computer Science,2023,2023-09-01
+2,Beto Martínez,beto@email.com,Mathematics,2024,2024-01-15
+3,Carlos López,carlos@email.com,Physics,2022,2022-09-01
+4,Diana Pérez,diana@email.com,Computer Science,2023,2023-09-01
+5,Elena Ruiz,elena@email.com,Engineering,2024,2024-01-15
+6,Fernando Gómez,fernando@email.com,Biology,2023,2023-09-01
+7,Gloria Sánchez,gloria@email.com,Mathematics,2022,2022-09-01
+8,Hugo Martín,hugo@email.com,Physics,2024,2024-01-15
+9,Isabel Jiménez,isabel@email.com,Computer Science,2022,2022-09-01
+10,Javier Torres,javier@email.com,Engineering,2023,2023-09-01

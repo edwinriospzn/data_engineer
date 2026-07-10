@@ -1,0 +1,57 @@
+[2026-07-10T01:24:05.205+0000] {processor.py:186} INFO - Started process (PID=15232) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:05.206+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:24:05.209+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.209+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:05.228+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:05.484+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.484+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:10_sql_operator_pro
+[2026-07-10T01:24:05.502+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.502+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:10_sql_operator_pro
+[2026-07-10T01:24:05.518+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.517+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:10_sql_operator_pro
+[2026-07-10T01:24:05.533+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.533+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:10_sql_operator_pro
+[2026-07-10T01:24:05.546+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.545+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:10_sql_operator_pro
+[2026-07-10T01:24:05.562+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.561+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:10_sql_operator_pro
+[2026-07-10T01:24:05.579+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.578+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:10_sql_operator_pro
+[2026-07-10T01:24:05.579+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.579+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:24:05.595+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.595+0000] {dag.py:3262} INFO - Creating ORM DAG for 10_sql_operator_pro
+[2026-07-10T01:24:05.596+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:05.596+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:24:05.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.427 seconds
+[2026-07-10T01:24:36.041+0000] {processor.py:186} INFO - Started process (PID=15277) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:36.043+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:24:36.047+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:36.047+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:36.063+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:24:36.104+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:36.104+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:24:36.123+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:24:36.122+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:24:36.150+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.129 seconds
+[2026-07-10T01:25:06.235+0000] {processor.py:186} INFO - Started process (PID=15322) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:06.237+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:25:06.239+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:06.238+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:06.250+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:06.293+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:06.292+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:25:06.330+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:06.329+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:25:06.365+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.137 seconds
+[2026-07-10T01:25:36.761+0000] {processor.py:186} INFO - Started process (PID=15367) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:36.764+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:25:36.770+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:36.769+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:36.793+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:25:36.871+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:36.871+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:25:36.903+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:25:36.902+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:25:36.940+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.209 seconds
+[2026-07-10T01:26:07.088+0000] {processor.py:186} INFO - Started process (PID=15413) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:07.092+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:26:07.105+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:07.103+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:07.145+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:07.224+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:07.223+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:26:07.258+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:07.258+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:26:07.319+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.262 seconds
+[2026-07-10T01:26:37.614+0000] {processor.py:186} INFO - Started process (PID=15493) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:37.616+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:26:37.621+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:37.621+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:37.638+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:26:37.700+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:37.700+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:26:37.725+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:26:37.725+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:26:37.760+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.156 seconds
+[2026-07-10T01:27:07.991+0000] {processor.py:186} INFO - Started process (PID=15538) to work on /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:27:07.992+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/10_sql_operator_pro.py for tasks to queue
+[2026-07-10T01:27:07.996+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:27:07.995+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:27:08.011+0000] {processor.py:925} INFO - DAG(s) '10_sql_operator_pro' retrieved from /opt/airflow/dags/10_sql_operator_pro.py
+[2026-07-10T01:27:08.064+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:27:08.063+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-07-10T01:27:08.092+0000] {logging_mixin.py:190} INFO - [2026-07-10T01:27:08.092+0000] {dag.py:4180} INFO - Setting next_dagrun for 10_sql_operator_pro to None, run_after=None
+[2026-07-10T01:27:08.124+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/10_sql_operator_pro.py took 0.142 seconds

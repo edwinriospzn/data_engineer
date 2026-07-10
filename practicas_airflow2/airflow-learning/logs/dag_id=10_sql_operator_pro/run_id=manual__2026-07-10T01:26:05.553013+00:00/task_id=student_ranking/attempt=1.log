@@ -1,0 +1,63 @@
+[2026-07-10T01:26:14.749+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-07-10T01:26:14.806+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 10_sql_operator_pro.student_ranking manual__2026-07-10T01:26:05.553013+00:00 [queued]>
+[2026-07-10T01:26:14.850+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 10_sql_operator_pro.student_ranking manual__2026-07-10T01:26:05.553013+00:00 [queued]>
+[2026-07-10T01:26:14.852+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-07-10T01:26:14.926+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): student_ranking> on 2026-07-10 01:26:05.553013+00:00
+[2026-07-10T01:26:14.968+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '10_sql_operator_pro', 'student_ranking', 'manual__2026-07-10T01:26:05.553013+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/10_sql_operator_pro.py', '--cfg-path', '/tmp/tmpddhul5br']
+[2026-07-10T01:26:14.985+0000] {standard_task_runner.py:105} INFO - Job 44: Subtask student_ranking
+[2026-07-10T01:26:14.995+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=15431) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-10T01:26:15.011+0000] {standard_task_runner.py:72} INFO - Started process 15446 to run task
+[2026-07-10T01:26:15.352+0000] {task_command.py:467} INFO - Running <TaskInstance: 10_sql_operator_pro.student_ranking manual__2026-07-10T01:26:05.553013+00:00 [running]> on host 8cff16b43c6d
+[2026-07-10T01:26:15.837+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='10_sql_operator_pro' AIRFLOW_CTX_TASK_ID='student_ranking' AIRFLOW_CTX_EXECUTION_DATE='2026-07-10T01:26:05.553013+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-10T01:26:05.553013+00:00'
+[2026-07-10T01:26:15.838+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-07-10T01:26:15.962+0000] {sql.py:278} INFO - Executing: 
+            SELECT 
+                s.name,
+                c.course_name,
+                e.grade,
+                RANK() OVER (PARTITION BY c.course_id ORDER BY 
+                    CASE 
+                        WHEN e.grade = 'A' THEN 4.0
+                        WHEN e.grade = 'A-' THEN 3.7
+                        WHEN e.grade = 'B+' THEN 3.3
+                        WHEN e.grade = 'B' THEN 3.0
+                        WHEN e.grade = 'B-' THEN 2.7
+                        WHEN e.grade = 'C+' THEN 2.3
+                        WHEN e.grade = 'C' THEN 2.0
+                        ELSE 0
+                    END DESC) as rank_in_course
+            FROM t10_students s
+            JOIN t10_enrollments e ON s.student_id = e.student_id
+            JOIN t10_courses c ON e.course_id = c.course_id
+            ORDER BY c.course_name, rank_in_course;
+        
+[2026-07-10T01:26:16.042+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-07-10T01:26:16.050+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T01:26:16.122+0000] {base.py:84} INFO - Retrieving connection 'etl_postgres'
+[2026-07-10T01:26:16.175+0000] {sql.py:544} INFO - Running statement: 
+            SELECT 
+                s.name,
+                c.course_name,
+                e.grade,
+                RANK() OVER (PARTITION BY c.course_id ORDER BY 
+                    CASE 
+                        WHEN e.grade = 'A' THEN 4.0
+                        WHEN e.grade = 'A-' THEN 3.7
+                        WHEN e.grade = 'B+' THEN 3.3
+                        WHEN e.grade = 'B' THEN 3.0
+                        WHEN e.grade = 'B-' THEN 2.7
+                        WHEN e.grade = 'C+' THEN 2.3
+                        WHEN e.grade = 'C' THEN 2.0
+                        ELSE 0
+                    END DESC) as rank_in_course
+            FROM t10_students s
+            JOIN t10_enrollments e ON s.student_id = e.student_id
+            JOIN t10_courses c ON e.course_id = c.course_id
+            ORDER BY c.course_name, rank_in_course;
+        , parameters: None
+[2026-07-10T01:26:16.188+0000] {sql.py:553} INFO - Rows affected: 20
+[2026-07-10T01:26:16.372+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-07-10T01:26:16.375+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=10_sql_operator_pro, task_id=student_ranking, run_id=manual__2026-07-10T01:26:05.553013+00:00, execution_date=20260710T012605, start_date=20260710T012614, end_date=20260710T012616
+[2026-07-10T01:26:16.455+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-07-10T01:26:16.580+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-10T01:26:16.595+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

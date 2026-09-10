@@ -1,0 +1,219 @@
+[2026-09-10T03:31:41.829+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-10T03:31:41.870+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 08_spark.run_sales_processing manual__2026-09-10T03:31:39.362093+00:00 [queued]>
+[2026-09-10T03:31:41.888+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 08_spark.run_sales_processing manual__2026-09-10T03:31:39.362093+00:00 [queued]>
+[2026-09-10T03:31:41.888+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-09-10T03:31:41.908+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): run_sales_processing> on 2026-09-10 03:31:39.362093+00:00
+[2026-09-10T03:31:41.924+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5247) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-10T03:31:41.927+0000] {standard_task_runner.py:72} INFO - Started process 5249 to run task
+[2026-09-10T03:31:41.925+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '08_spark', 'run_sales_processing', 'manual__2026-09-10T03:31:39.362093+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/08_spark.py', '--cfg-path', '/tmp/tmpzuwpoc4o']
+[2026-09-10T03:31:41.930+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask run_sales_processing
+[2026-09-10T03:31:42.074+0000] {task_command.py:467} INFO - Running <TaskInstance: 08_spark.run_sales_processing manual__2026-09-10T03:31:39.362093+00:00 [running]> on host 205a39116a9d
+[2026-09-10T03:31:42.245+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='08_spark' AIRFLOW_CTX_TASK_ID='run_sales_processing' AIRFLOW_CTX_EXECUTION_DATE='2026-09-10T03:31:39.362093+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-10T03:31:39.362093+00:00'
+[2026-09-10T03:31:42.248+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-09-10T03:32:29.603+0000] {job.py:229} INFO - Heartbeat recovered after 16.41 seconds
+[2026-09-10T03:32:39.359+0000] {job.py:229} INFO - Heartbeat recovered after 10.92 seconds
+[2026-09-10T03:32:57.073+0000] {job.py:229} INFO - Heartbeat recovered after 11.52 seconds
+[2026-09-10T03:33:26.136+0000] {job.py:229} INFO - Heartbeat recovered after 29.76 seconds
+[2026-09-10T03:33:46.376+0000] {job.py:229} INFO - Heartbeat recovered after 21.34 seconds
+[2026-09-10T03:34:14.918+0000] {job.py:229} INFO - Heartbeat recovered after 29.78 seconds
+[2026-09-10T03:34:45.130+0000] {job.py:239} ERROR - Job heartbeat failed with error
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "postgres" (172.24.0.2), port 5432 failed: FATAL:  the database system is in recovery mode
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/job.py", line 224, in heartbeat
+    job = Job._update_heartbeat(job=self, session=session)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/retries.py", line 93, in wrapped_function
+    for attempt in run_with_db_retries(max_retries=retries, logger=logger, **retry_kwargs):
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 443, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 376, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 418, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/tenacity/__init__.py", line 185, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/retries.py", line 102, in wrapped_function
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/jobs/job.py", line 374, in _update_heartbeat
+    orm_job: Job | None = session.scalar(select(Job).where(Job.id == job.id).limit(1))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1747, in scalar
+    return self.execute(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+    return self._transaction._connection_for_bind(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+    return super(Engine, self).connect()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+    Connection._handle_dbapi_exception_noconnection(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+    util.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+    return fn()
+           ^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+          ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+    return self._create_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.24.0.2), port 5432 failed: FATAL:  the database system is in recovery mode
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-09-10T03:34:47.102+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-09-10T03:34:53.360+0000] {job.py:254} ERROR - Job heartbeat failed with error. Scheduler is in unhealthy state
+[2026-09-10T03:34:58.642+0000] {job.py:229} INFO - Heartbeat recovered after 45.77 seconds
+[2026-09-10T03:35:17.120+0000] {logging_mixin.py:190} INFO - 
+📊 RAW DATA:
+[2026-09-10T03:35:17.915+0000] {logging_mixin.py:190} INFO - +--------------+-----------+----------+------+-----------+----------------+
+|transaction_id|customer_id|product_id|amount|   category|transaction_date|
++--------------+-----------+----------+------+-----------+----------------+
+|          1001|       C001|      P101| 150.5|Electronics|      2026-07-01|
+|          1002|       C002|      P102|  45.0|      Books|      2026-07-02|
+|          1003|       C001|      P103| 89.99|   Clothing|      2026-07-03|
+|          1004|       C003|      P101|299.99|Electronics|      2026-07-04|
+|          1005|       C002|      P104|  12.5|      Books|      2026-07-05|
+|          1006|       C004|      P105|  67.3|   Clothing|      2026-07-06|
+|          1007|       C001|      P102|  45.0|      Books|      2026-07-07|
+|          1008|       C003|      P106| 120.0|Electronics|      2026-07-08|
+|          1009|       C005|      P107|  34.5|      Books|      2026-07-09|
+|          1010|       C004|      P108| 89.99|   Clothing|      2026-07-10|
++--------------+-----------+----------+------+-----------+----------------+
+[2026-09-10T03:35:18.419+0000] {logging_mixin.py:190} INFO - 
+💰 SALES BY CATEGORY:
+[2026-09-10T03:35:35.985+0000] {logging_mixin.py:190} INFO - +-----------+------------------+------------------+-----------------+
+|   category|     total_revenue|        avg_amount|transaction_count|
++-----------+------------------+------------------+-----------------+
+|Electronics|            570.49|190.16333333333333|                3|
+|   Clothing|247.27999999999997| 82.42666666666666|                3|
+|      Books|             137.0|             34.25|                4|
++-----------+------------------+------------------+-----------------+
+[2026-09-10T03:35:38.762+0000] {logging_mixin.py:190} INFO - 
+🏆 TOP 5 PRODUCTS BY REVENUE:
+[2026-09-10T03:36:33.637+0000] {job.py:229} INFO - Heartbeat recovered after 67.49 seconds
+[2026-09-10T03:36:36.189+0000] {logging_mixin.py:190} INFO - +----------+-------------+
+|product_id|total_revenue|
++----------+-------------+
+|      P101|       450.49|
+|      P106|        120.0|
+|      P102|         90.0|
+|      P103|        89.99|
+|      P108|        89.99|
++----------+-------------+
+[2026-09-10T03:36:41.760+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-09-10T03:36:45.382+0000] {job.py:229} INFO - Heartbeat recovered after 12.51 seconds
+[2026-09-10T03:36:46.535+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-09-10T03:36:46.561+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=08_spark, task_id=run_sales_processing, run_id=manual__2026-09-10T03:31:39.362093+00:00, execution_date=20260910T033139, start_date=20260910T033141, end_date=20260910T033646
+[2026-09-10T03:36:47.045+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-09-10T03:36:47.301+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-10T03:36:47.303+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

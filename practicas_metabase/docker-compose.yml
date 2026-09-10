@@ -1,0 +1,12 @@
+services:
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "3000:3000" 
+    environment:
+      MB_JETTY_HOST: 0.0.0.0
+    restart: unless-stopped
+# http://localhost:3000/
+# admin@example.com
+# M3t4_pass1234

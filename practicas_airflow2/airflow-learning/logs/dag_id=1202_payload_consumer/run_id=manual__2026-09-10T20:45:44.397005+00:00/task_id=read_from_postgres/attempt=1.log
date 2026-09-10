@@ -1,0 +1,22 @@
+[2026-09-10T20:45:47.054+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-09-10T20:45:47.075+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 1202_payload_consumer.read_from_postgres manual__2026-09-10T20:45:44.397005+00:00 [queued]>
+[2026-09-10T20:45:47.084+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 1202_payload_consumer.read_from_postgres manual__2026-09-10T20:45:44.397005+00:00 [queued]>
+[2026-09-10T20:45:47.084+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2026-09-10T20:45:47.098+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): read_from_postgres> on 2026-09-10 20:45:44.397005+00:00
+[2026-09-10T20:45:47.108+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3900) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-10T20:45:47.110+0000] {standard_task_runner.py:72} INFO - Started process 3904 to run task
+[2026-09-10T20:45:47.109+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', '1202_payload_consumer', 'read_from_postgres', 'manual__2026-09-10T20:45:44.397005+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/1202_payload_consumer.py', '--cfg-path', '/tmp/tmp0r6wzfyx']
+[2026-09-10T20:45:47.112+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask read_from_postgres
+[2026-09-10T20:45:47.197+0000] {task_command.py:467} INFO - Running <TaskInstance: 1202_payload_consumer.read_from_postgres manual__2026-09-10T20:45:44.397005+00:00 [running]> on host f0b5c0de88a4
+[2026-09-10T20:45:47.387+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='1202_payload_consumer' AIRFLOW_CTX_TASK_ID='read_from_postgres' AIRFLOW_CTX_EXECUTION_DATE='2026-09-10T20:45:44.397005+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-10T20:45:44.397005+00:00'
+[2026-09-10T20:45:47.388+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-09-10T20:45:47.420+0000] {logging_mixin.py:190} INFO - 🗄️  Read 3 rows from DB for batch=batch-20260910204541
+[2026-09-10T20:45:47.420+0000] {logging_mixin.py:190} INFO -    (1001, 'Ana', Decimal('250.00'), 'Shipped')
+[2026-09-10T20:45:47.420+0000] {logging_mixin.py:190} INFO -    (1002, 'Beto', Decimal('80.00'), 'Pending')
+[2026-09-10T20:45:47.420+0000] {logging_mixin.py:190} INFO -    (1003, 'Carlos', Decimal('120.00'), 'Delivered')
+[2026-09-10T20:45:47.421+0000] {python.py:240} INFO - Done. Returned value was: 3
+[2026-09-10T20:45:47.456+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-09-10T20:45:47.457+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=1202_payload_consumer, task_id=read_from_postgres, run_id=manual__2026-09-10T20:45:44.397005+00:00, execution_date=20260910T204544, start_date=20260910T204547, end_date=20260910T204547
+[2026-09-10T20:45:47.487+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-09-10T20:45:47.516+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-10T20:45:47.517+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

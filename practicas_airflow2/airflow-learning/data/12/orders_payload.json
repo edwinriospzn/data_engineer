@@ -1,0 +1,24 @@
+{
+  "batch_id": "batch-20260910204541",
+  "produced_at": "2026-09-10T20:45:41.507292",
+  "records": [
+    {
+      "order_id": 1001,
+      "customer": "Ana",
+      "amount": 250.0,
+      "status": "Shipped"
+    },
+    {
+      "order_id": 1002,
+      "customer": "Beto",
+      "amount": 80.0,
+      "status": "Pending"
+    },
+    {
+      "order_id": 1003,
+      "customer": "Carlos",
+      "amount": 120.0,
+      "status": "Delivered"
+    }
+  ]
+}

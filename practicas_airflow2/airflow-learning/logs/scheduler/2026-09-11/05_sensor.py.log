@@ -1,0 +1,21 @@
+[2026-09-11T00:13:04.763+0000] {processor.py:186} INFO - Started process (PID=14382) to work on /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:04.765+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/05_sensor.py for tasks to queue
+[2026-09-11T00:13:04.782+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:04.781+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:04.861+0000] {processor.py:925} INFO - DAG(s) '05_sensor' retrieved from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:05.151+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:05.150+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:05.246+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:05.246+0000] {dag.py:4180} INFO - Setting next_dagrun for 05_sensor to None, run_after=None
+[2026-09-11T00:13:05.466+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/05_sensor.py took 0.751 seconds
+[2026-09-11T00:13:35.632+0000] {processor.py:186} INFO - Started process (PID=14452) to work on /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:35.634+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/05_sensor.py for tasks to queue
+[2026-09-11T00:13:35.641+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:35.640+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:35.657+0000] {processor.py:925} INFO - DAG(s) '05_sensor' retrieved from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:13:35.733+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:35.733+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:35.768+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:35.767+0000] {dag.py:4180} INFO - Setting next_dagrun for 05_sensor to None, run_after=None
+[2026-09-11T00:13:35.804+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/05_sensor.py took 0.197 seconds
+[2026-09-11T00:14:05.977+0000] {processor.py:186} INFO - Started process (PID=14524) to work on /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:14:05.978+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/05_sensor.py for tasks to queue
+[2026-09-11T00:14:05.980+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:05.980+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:14:05.990+0000] {processor.py:925} INFO - DAG(s) '05_sensor' retrieved from /opt/airflow/dags/05_sensor.py
+[2026-09-11T00:14:06.024+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:06.024+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:14:06.040+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:06.039+0000] {dag.py:4180} INFO - Setting next_dagrun for 05_sensor to None, run_after=None
+[2026-09-11T00:14:06.058+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/05_sensor.py took 0.089 seconds

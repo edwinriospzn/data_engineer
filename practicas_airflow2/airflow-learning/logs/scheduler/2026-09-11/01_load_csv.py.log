@@ -1,0 +1,21 @@
+[2026-09-11T00:13:06.092+0000] {processor.py:186} INFO - Started process (PID=14397) to work on /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:06.094+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_load_csv.py for tasks to queue
+[2026-09-11T00:13:06.109+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:06.108+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:06.157+0000] {processor.py:925} INFO - DAG(s) '01_load_csv' retrieved from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:06.349+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:06.345+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:06.425+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:06.425+0000] {dag.py:4180} INFO - Setting next_dagrun for 01_load_csv to None, run_after=None
+[2026-09-11T00:13:06.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_load_csv.py took 0.674 seconds
+[2026-09-11T00:13:36.992+0000] {processor.py:186} INFO - Started process (PID=14469) to work on /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:36.994+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_load_csv.py for tasks to queue
+[2026-09-11T00:13:36.997+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:36.997+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:37.015+0000] {processor.py:925} INFO - DAG(s) '01_load_csv' retrieved from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:13:37.056+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:37.056+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:37.078+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:37.078+0000] {dag.py:4180} INFO - Setting next_dagrun for 01_load_csv to None, run_after=None
+[2026-09-11T00:13:37.105+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_load_csv.py took 0.126 seconds
+[2026-09-11T00:14:07.218+0000] {processor.py:186} INFO - Started process (PID=14539) to work on /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:14:07.219+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/01_load_csv.py for tasks to queue
+[2026-09-11T00:14:07.221+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:07.221+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:14:07.230+0000] {processor.py:925} INFO - DAG(s) '01_load_csv' retrieved from /opt/airflow/dags/01_load_csv.py
+[2026-09-11T00:14:07.259+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:07.258+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:14:07.274+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:07.273+0000] {dag.py:4180} INFO - Setting next_dagrun for 01_load_csv to None, run_after=None
+[2026-09-11T00:14:07.292+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/01_load_csv.py took 0.082 seconds

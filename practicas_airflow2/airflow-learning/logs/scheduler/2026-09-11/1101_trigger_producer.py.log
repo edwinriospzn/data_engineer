@@ -1,0 +1,21 @@
+[2026-09-11T00:13:02.527+0000] {processor.py:186} INFO - Started process (PID=14352) to work on /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:02.529+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/1101_trigger_producer.py for tasks to queue
+[2026-09-11T00:13:02.545+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:02.544+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:02.596+0000] {processor.py:925} INFO - DAG(s) '1101_trigger_producer' retrieved from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:02.768+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:02.767+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:02.838+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:02.837+0000] {dag.py:4180} INFO - Setting next_dagrun for 1101_trigger_producer to None, run_after=None
+[2026-09-11T00:13:02.957+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/1101_trigger_producer.py took 0.485 seconds
+[2026-09-11T00:13:33.521+0000] {processor.py:186} INFO - Started process (PID=14422) to work on /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:33.529+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/1101_trigger_producer.py for tasks to queue
+[2026-09-11T00:13:33.533+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:33.533+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:33.557+0000] {processor.py:925} INFO - DAG(s) '1101_trigger_producer' retrieved from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:13:33.655+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:33.655+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:13:33.704+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:13:33.704+0000] {dag.py:4180} INFO - Setting next_dagrun for 1101_trigger_producer to None, run_after=None
+[2026-09-11T00:13:33.772+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/1101_trigger_producer.py took 0.267 seconds
+[2026-09-11T00:14:04.458+0000] {processor.py:186} INFO - Started process (PID=14492) to work on /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:14:04.459+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/1101_trigger_producer.py for tasks to queue
+[2026-09-11T00:14:04.463+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:04.462+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:14:04.483+0000] {processor.py:925} INFO - DAG(s) '1101_trigger_producer' retrieved from /opt/airflow/dags/1101_trigger_producer.py
+[2026-09-11T00:14:04.523+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:04.522+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-09-11T00:14:04.542+0000] {logging_mixin.py:190} INFO - [2026-09-11T00:14:04.542+0000] {dag.py:4180} INFO - Setting next_dagrun for 1101_trigger_producer to None, run_after=None
+[2026-09-11T00:14:04.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/1101_trigger_producer.py took 0.125 seconds

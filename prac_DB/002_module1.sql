@@ -132,8 +132,8 @@ select
 c.customer_id,
 c.first_name ,
 c.last_name ,
-rank()  over (order by sum(p.amount) desc ) rank,
-sum(p.amount) total_amount
+rank()  over (order by sum(coalesce(p.amount,0)) desc ) rank,
+sum(coalesce(p.amount,0)) total_amount
 from customer c 
 left join payment p
 on c.customer_id =p.customer_id 
